@@ -1,0 +1,6 @@
+C:\Users\tony_\source\repos\UIPathCustom\UIPathCustom\bin\Debug\UIPathCustom.dll
+C:\Users\tony_\source\repos\UIPathCustom\UIPathCustom\bin\Debug\UIPathCustom.pdb
+C:\Users\tony_\source\repos\UIPathCustom\UIPathCustom\obj\Debug\UIPathCustom.csproj.CoreCompileInputs.cache
+C:\Users\tony_\source\repos\UIPathCustom\UIPathCustom\obj\Debug\UIPathCustom.dll
+C:\Users\tony_\source\repos\UIPathCustom\UIPathCustom\obj\Debug\UIPathCustom.pdb
+C:\Users\tony_\source\repos\UIPathCustom\UIPathCustom\obj\Debug\UIPathCustom.csprojAssemblyReference.cache
