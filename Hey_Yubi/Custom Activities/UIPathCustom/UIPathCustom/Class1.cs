@@ -7,6 +7,8 @@ using System.Activities;
 using System.ComponentModel;
 using System.Speech.Recognition;
 using System.Speech.Synthesis;
+using System.Media;
+using System.IO;
 
 namespace UIPathCustom
 {
@@ -47,4 +49,17 @@ namespace UIPathCustom
 
         }
     }
+    public class PlaySound : CodeActivity
+    {
+        [Category("Input")]
+        public InArgument<string> filepath { get; set; }
+
+        protected override void Execute(CodeActivityContext context)
+        {
+            string path = filepath.Get(context);
+            SoundPlayer sound = new SoundPlayer(path);
+            sound.Play();
+        }
+    }
+
 }

@@ -7,6 +7,12 @@ using System.Speech.Recognition;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Media;
+using System.IO;
+
+/// <summary>
+/// The Test file is there to help me what program is needed 
+/// </summary>
 
 namespace Test
 {
@@ -25,25 +31,30 @@ namespace Test
             recon.LoadGrammar(g);
             recon.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(sre_SpeechRecongnized);
             Console.ReadKey();*/
+         /*
+         SpeechRecognizer recon = new SpeechRecognizer();
+         SpeechSynthesizer synth = new SpeechSynthesizer();
+         synth.Volume = 100;
+         synth.Rate = 0;
+         synth.Speak("Say Something now");
 
-            SpeechRecognizer recon = new SpeechRecognizer();
-            SpeechSynthesizer synth = new SpeechSynthesizer();
-            synth.Volume = 100;
-            synth.Rate = 0;
-            synth.Speak("Say Something now");
-
-            DictationGrammar Grammar = new DictationGrammar();
-            SpeechRecognitionEngine SpeechEngine = new SpeechRecognitionEngine();
-            SpeechEngine.LoadGrammar(Grammar);
-            recon.LoadGrammar(Grammar);
-            recon.SpeechRecognized += EventHandler<SpeechRecognizedEventArgs>(sre_SpeechRecongnized);
-            /*
-            SpeechEngine.SetInputToDefaultAudioDevice();
-            var sp = SpeechEngine.Recognize();
-            Console.WriteLine(sp.Text);*/
-
+         DictationGrammar Grammar = new DictationGrammar();
+         SpeechRecognitionEngine SpeechEngine = new SpeechRecognitionEngine();
+         SpeechEngine.LoadGrammar(Grammar);
+         recon.LoadGrammar(Grammar);
+         recon.SpeechRecognized += EventHandler<SpeechRecognizedEventArgs>(sre_SpeechRecongnized);
+         /*
+         SpeechEngine.SetInputToDefaultAudioDevice();
+         var sp = SpeechEngine.Recognize();
+         Console.WriteLine(sp.Text);*/
+            string currentdirectory = Directory.GetCurrentDirectory();
+            int endindex = currentdirectory.Length - 10;
+            currentdirectory = currentdirectory.Substring(0, endindex);
+            currentdirectory += "\\wav\\beep-07.wav";
+            SoundPlayer simpleSound = new SoundPlayer(currentdirectory);
+            simpleSound.Play();
             Console.ReadKey();
-            
+
         }
 
         private static EventHandler<T> EventHandler<T>(Action<object, T> sre_SpeechRecongnized)

@@ -918,11 +918,11 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "Hey_Yubi",
-      "projectName": "Hey_Yubi",
-      "projectPath": "C:\\Users\\tony_\\OneDrive\\Desktop\\Github stuff\\Hey Yubi\\Hey_Yubi\\.local",
+      "projectUniqueName": "Music",
+      "projectName": "Music",
+      "projectPath": "C:\\Users\\tony_\\OneDrive\\Desktop\\Github stuff\\Hey Yubi\\Music\\.local",
       "packagesPath": "C:\\Users\\tony_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tony_\\OneDrive\\Desktop\\Github stuff\\Hey Yubi\\Hey_Yubi\\.local"
+      "outputPath": "C:\\Users\\tony_\\OneDrive\\Desktop\\Github stuff\\Hey Yubi\\Music\\.local"
     },
     "frameworks": {
       "net461": {

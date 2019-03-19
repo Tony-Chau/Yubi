@@ -4,3 +4,9 @@ C:\Users\tony_\source\repos\UIPathCustom\UIPathCustom\obj\Debug\UIPathCustom.csp
 C:\Users\tony_\source\repos\UIPathCustom\UIPathCustom\obj\Debug\UIPathCustom.dll
 C:\Users\tony_\source\repos\UIPathCustom\UIPathCustom\obj\Debug\UIPathCustom.pdb
 C:\Users\tony_\source\repos\UIPathCustom\UIPathCustom\obj\Debug\UIPathCustom.csprojAssemblyReference.cache
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\bin\Debug\UIPathCustom.dll
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\bin\Debug\UIPathCustom.pdb
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\obj\Debug\UIPathCustom.csprojAssemblyReference.cache
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\obj\Debug\UIPathCustom.csproj.CoreCompileInputs.cache
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\obj\Debug\UIPathCustom.dll
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\obj\Debug\UIPathCustom.pdb

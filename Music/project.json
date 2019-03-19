@@ -1,6 +1,6 @@
 {
-  "name": "Hey_Yubi",
-  "description": "Youtube API AI",
+  "name": "Music",
+  "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.UIAutomation.Activities": "[19.2.0]",
