@@ -1,4 +1,14 @@
+Must be in Python 3.6 ver. 
 the .whl file must be installed via gitbash or CMD. Python must have pip
-Type
-pip install speech_recognition
-pip install <filename>.whl 	~ install using the PyAudio-0.2.11-cp37-cp37m-win_amd64.whl
+Type (make sure you run cmd/git bash as administrator)
+
+python -m pip install --upgrade pip 
+pip install SpeechRecognition
+
+pip install <filename>.whl (Must be located withint he asset/python folder)
+If using Python 32bit
+	PyAudio-0.2.11-cp36-cp36m-win32.whl
+else the 64 bit
+	PyAudio-0.2.11-cp36-cp36m-win_amd64.whl
+OR
+	pip install PyAudio
