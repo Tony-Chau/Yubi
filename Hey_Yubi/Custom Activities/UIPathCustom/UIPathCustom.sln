@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIPathCustom", "UIPathCusto
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{F269D50B-75C1-4BE1-BEB2-B95CA4B014D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Youtube", "Youtube\Youtube.csproj", "{D949C8A6-2280-4F5A-9FD4-D56858C4B3A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F269D50B-75C1-4BE1-BEB2-B95CA4B014D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F269D50B-75C1-4BE1-BEB2-B95CA4B014D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F269D50B-75C1-4BE1-BEB2-B95CA4B014D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D949C8A6-2280-4F5A-9FD4-D56858C4B3A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D949C8A6-2280-4F5A-9FD4-D56858C4B3A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D949C8A6-2280-4F5A-9FD4-D56858C4B3A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D949C8A6-2280-4F5A-9FD4-D56858C4B3A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
