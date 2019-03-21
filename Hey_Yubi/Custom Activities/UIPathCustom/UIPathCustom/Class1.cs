@@ -12,19 +12,33 @@ using System.IO;
 
 namespace UIPathCustom
 {
+    /// <summary>
+    /// Text to speech activity
+    /// </summary>
     public class TextToSpeech : CodeActivity
     {
-
+        /// <summary>
+        /// Volume of the voice
+        /// </summary>
         [Category("Input")]
         public InArgument<int> Volume { get; set; }
 
+        /// <summary>
+        /// The rate of the voice (must be value between -10 to 10)
+        /// </summary>
         [Category("Input")]
         public InArgument<int> Rate { get; set; }
 
+        /// <summary>
+        /// The message the voice will say
+        /// </summary>
         [Category("Input")]
         public InArgument<string> Message { get; set; }
 
-
+        /// <summary>
+        /// The execution of the voice
+        /// </summary>
+        /// <param name="context"></param>
         protected override void Execute(CodeActivityContext context)
         {
             SpeechSynthesizer synth = new SpeechSynthesizer();
@@ -33,27 +47,22 @@ namespace UIPathCustom
             synth.Speak(Message.Get(context));
         }
     }
-    public class SpeechToText : CodeActivity
-    {
-        [Category("Output")]
-        public OutArgument<string> Message { get; set; }
 
-
-        protected override void Execute(CodeActivityContext context)
-        {
-            DictationGrammar Grammar = new DictationGrammar();
-            SpeechRecognitionEngine SpeechEngine = new SpeechRecognitionEngine();
-            SpeechEngine.LoadGrammar(Grammar);
-            SpeechEngine.SetInputToDefaultAudioDevice();
-            Message.Set(context, SpeechEngine.Recognize().Text);
-
-        }
-    }
+    /// <summary>
+    /// Playing the Wav sound activity
+    /// </summary>
     public class PlaySound : CodeActivity
     {
+        /// <summary>
+        /// The path to the wav file
+        /// </summary>
         [Category("Input")]
         public InArgument<string> filepath { get; set; }
 
+        /// <summary>
+        /// Execution of the wav file
+        /// </summary>
+        /// <param name="context"></param>
         protected override void Execute(CodeActivityContext context)
         {
             string path = filepath.Get(context);
@@ -62,4 +71,45 @@ namespace UIPathCustom
         }
     }
 
+    /// <summary>
+    /// Sorting out the spelling of the word the user is saying
+    /// </summary>
+    public class SortSpellLetters : CodeActivity
+    {
+        /// <summary>
+        /// The spelled out world that will be fixed up
+        /// </summary>
+        [Category("Input")]
+        public InArgument<string> SpelledOutWord { get; set; }
+
+        /// <summary>
+        /// The fixed up text
+        /// </summary>
+        [Category("Output")]
+        public OutArgument<string> Result { get; set; }
+
+        /// <summary>
+        /// The execution of the spelled out word
+        /// </summary>
+        /// <param name="context"></param>
+        protected override void Execute(CodeActivityContext context)
+        {
+            string word = SpelledOutWord.Get(context);
+            word.ToLower();
+            word.Replace("dot", ".");
+            word.Replace("dash", "-");
+            word.Replace("divide", "/");
+            word.Replace("minus", "-");
+            word.Replace("plus", "+");
+            word.Replace("add", "+");
+            word.Replace("hash", "#");
+            word.Replace("mutiply", "*");
+            word.Replace("asterisk", "*");
+            word.Replace("under score", "_");
+
+            word.Replace(" ", "");
+            word.Replace("space", " ");
+            Result.Set(context, word);
+        }
+    }
 }

@@ -59,10 +59,11 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Main" sap:VirtualizedContainerService.HintSize="738,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="Searching Phase" DisplayName="Main" sap:VirtualizedContainerService.HintSize="754,718" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
-      <Variable x:TypeArguments="x:Boolean" Default="True" Name="SearchResponse" />
+      <Variable x:TypeArguments="x:Boolean" Default="False" Name="IsSearchEmpty" />
       <Variable x:TypeArguments="x:String" Name="SearchItem" />
+      <Variable x:TypeArguments="x:String" Name="CorrectSearch" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -70,64 +71,185 @@
         <av:Point x:Key="ShapeLocation">330,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <av:PointCollection x:Key="ConnectorLocation">360,77.5 360,127.5</av:PointCollection>
-        <x:Double x:Key="Width">724</x:Double>
+        <x:Double x:Key="Width">740</x:Double>
+        <x:Boolean x:Key="IsAnnotationDocked">False</x:Boolean>
+        <x:Double x:Key="Height">682.5</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID4</x:Reference>
+      <x:Reference>__ReferenceID8</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_9">
+    <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_14">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">203,127.5</av:Point>
-          <av:Size x:Key="ShapeSize">314,55</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">360,182.5 360,232.5</av:PointCollection>
+          <av:Point x:Key="ShapeLocation">260,232.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">360,283.5 360,316.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:Comment sap:VirtualizedContainerService.HintSize="314,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Write your comments in the Text property">
+      <Sequence DisplayName="Search" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:String" Name="SearchMethod" />
+        </Sequence.Variables>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-      </ui:Comment>
-      <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_14">
+        <If Condition="[IsSearchEmpty]" sap:VirtualizedContainerService.HintSize="476,208" sap2010:WorkflowViewState.IdRef="If_3">
+          <If.Then>
+            <u:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_3" Message="I am sorry, but I did not catch that. If your microphone is not connected? Please connect it now. Please say either type, spell or speak after this beep" Rate="0" Volume="100" />
+          </If.Then>
+        </If>
+        <u:PlaySound DisplayName="Play beep" sap:VirtualizedContainerService.HintSize="476,22" sap2010:WorkflowViewState.IdRef="PlaySound_2" filepath="asset\wav\beep-07.wav">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">260,232.5</av:Point>
-              <av:Size x:Key="ShapeSize">200,51</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">360,283.5 360,316.5</av:PointCollection>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Search" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        </u:PlaySound>
+        <p:PythonScope DisplayName="SearchMethod (Python)" sap:VirtualizedContainerService.HintSize="476,51" sap2010:WorkflowViewState.IdRef="PythonScope_4" Path="C:\Program Files (x86)\Python36-32">
+          <p:PythonScope.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="PythonEngineSessionProperty" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,407" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="p:PythonObject" Name="py_load" />
+                  <Variable x:TypeArguments="p:PythonObject" Name="pymethod" />
+                  <Variable x:TypeArguments="x:Object" Name="pyresult" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <p:LoadScript Code="{x:Null}" DisplayName="Load Python Script" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="LoadScript_5" Result="[py_load]" ScriptFile="asset\python\Speech-To-Text.py" />
+                <p:InvokeMethod Parameters="{x:Null}" DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="InvokeMethod_4" Instance="[py_load]" Name="SpeechToText" Result="[pymethod]" />
+                <p:GetObject x:TypeArguments="x:Object" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="GetObject`1_5" PythonObject="[pymethod]" Result="[pyresult]" />
+                <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[SearchMethod]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[(pyresult.ToString()).ToLower()]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </ActivityAction>
+          </p:PythonScope.Body>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </p:PythonScope>
+        <u:PlaySound DisplayName="Play beep" sap:VirtualizedContainerService.HintSize="476,22" sap2010:WorkflowViewState.IdRef="PlaySound_4" filepath="asset\wav\beep-07.wav">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </u:PlaySound>
+        <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[SearchMethod]" sap:VirtualizedContainerService.HintSize="476,182" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+          <Sequence x:Key="&quot;type&quot;" sap:VirtualizedContainerService.HintSize="336,278" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[SearchResponse]" sap:VirtualizedContainerService.HintSize="464,208" sap2010:WorkflowViewState.IdRef="If_3">
-              <If.Then>
-                <u:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_2" Message="Hello, My name is Yubi. I am your personal A.I. who can assist you to search and watch Youtube Videos. What do you want me to search? Please say something after the beep" Rate="10" Volume="100">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </u:TextToSpeech>
-              </If.Then>
-              <If.Else>
-                <u:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_3" Message="I am sorry, but I did not catch that. If your microphone is not connected? Please connect it now. Please say something after this beep" Rate="0" Volume="100" />
-              </If.Else>
-            </If>
-            <u:PlaySound DisplayName="Play beep" sap:VirtualizedContainerService.HintSize="464,22" sap2010:WorkflowViewState.IdRef="PlaySound_2" filepath="asset\wav\beep-07.wav">
+            <u:TextToSpeech sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_5" Message="Ok. Please type something on this box" Rate="0" Volume="100" />
+            <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="314,92" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Search" Title="Search Youtube">
+              <ui:InputDialog.Result>
+                <OutArgument x:TypeArguments="x:String">[SearchItem]</OutArgument>
+              </ui:InputDialog.Result>
+            </ui:InputDialog>
+          </Sequence>
+          <Sequence x:Key="&quot;spell&quot;" sap:VirtualizedContainerService.HintSize="222,361" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <u:TextToSpeech sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_6" Message="Ok. Please Spell out the word and call out the symbols on what you are searching for after this beep" Rate="0" Volume="100" />
+            <u:PlaySound DisplayName="Play beep" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="PlaySound_5" filepath="asset\wav\beep-07.wav">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </u:PlaySound>
-            <p:PythonScope DisplayName="Python Scope" sap:VirtualizedContainerService.HintSize="464,443" sap2010:WorkflowViewState.IdRef="PythonScope_2" Path="C:\Program Files (x86)\Python36-32">
+            <p:PythonScope DisplayName="SearchItem (Python)" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="PythonScope_5" Path="C:\Program Files (x86)\Python36-32">
+              <p:PythonScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="PythonEngineSessionProperty" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,469" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="p:PythonObject" Name="py_load" />
+                      <Variable x:TypeArguments="p:PythonObject" Name="pymethod" />
+                      <Variable x:TypeArguments="x:Object" Name="pyresult" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <p:LoadScript Code="{x:Null}" DisplayName="Load Python Script" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="LoadScript_6" Result="[py_load]" ScriptFile="asset\python\Speech-To-Text.py" />
+                    <p:InvokeMethod Parameters="{x:Null}" DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="InvokeMethod_5" Instance="[py_load]" Name="SpeechToText" Result="[pymethod]" />
+                    <p:GetObject x:TypeArguments="x:Object" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="GetObject`1_6" PythonObject="[pymethod]" Result="[pyresult]" />
+                    <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[SearchItem]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[pyresult.ToString()]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <u:SortSpellLetters DisplayName="Sort spell letters" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="SortSpellLetters_1" Result="[SearchItem]" SpelledOutWord="[SearchItem]" />
+                  </Sequence>
+                </ActivityAction>
+              </p:PythonScope.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </p:PythonScope>
+            <u:PlaySound DisplayName="Play beep" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="PlaySound_6" filepath="asset\wav\beep-07.wav">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </u:PlaySound>
+          </Sequence>
+          <Sequence x:Key="&quot;speak&quot;" sap:VirtualizedContainerService.HintSize="222,423" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <u:PlaySound DisplayName="Play beep" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="PlaySound_7" filepath="asset\wav\beep-07.wav">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </u:PlaySound>
+            <u:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_8" Message="Ok. Please say what you are searching for after this beep" Rate="0" Volume="100" />
+            <u:PlaySound DisplayName="Play beep" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="PlaySound_8" filepath="asset\wav\beep-07.wav">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </u:PlaySound>
+            <p:PythonScope DisplayName="SearchItem (Python)" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="PythonScope_2" Path="C:\Program Files (x86)\Python36-32">
               <p:PythonScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -160,142 +282,207 @@
               </p:PythonScope.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </p:PythonScope>
-            <u:PlaySound DisplayName="Play beep" sap:VirtualizedContainerService.HintSize="464,22" sap2010:WorkflowViewState.IdRef="PlaySound_3" filepath="asset\wav\beep-07.wav">
+            <u:PlaySound DisplayName="Play beep" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="PlaySound_9" filepath="asset\wav\beep-07.wav">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </u:PlaySound>
-            <Assign sap:VirtualizedContainerService.HintSize="464,60" sap2010:WorkflowViewState.IdRef="Assign_6">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:Boolean">[SearchResponse]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:Boolean">[string.IsNullOrEmpty(SearchItem)]</InArgument>
-              </Assign.Value>
-            </Assign>
           </Sequence>
-          <FlowStep.Next>
-            <FlowDecision x:Name="__ReferenceID1" Condition="[SearchResponse]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1" True="{x:Reference __ReferenceID0}">
+        </Switch>
+        <Assign sap:VirtualizedContainerService.HintSize="476,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:Boolean">[IsSearchEmpty]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:Boolean">[string.IsNullOrEmpty(SearchItem)]</InArgument>
+          </Assign.Value>
+        </Assign>
+      </Sequence>
+      <FlowStep.Next>
+        <FlowDecision x:Name="__ReferenceID1" Condition="[IsSearchEmpty]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1" True="{x:Reference __ReferenceID0}">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <av:Point x:Key="ShapeLocation">320.5,316.5</av:Point>
+              <av:Size x:Key="ShapeSize">79,87</av:Size>
+              <av:PointCollection x:Key="FalseConnector">399.5,360 500,360 500,450 470,450</av:PointCollection>
+              <av:PointCollection x:Key="TrueConnector">320.5,360 230,360 230,258 260,258</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <FlowDecision.False>
+            <FlowStep x:Name="__ReferenceID3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <av:Point x:Key="ShapeLocation">320.5,316.5</av:Point>
-                  <av:Size x:Key="ShapeSize">79,87</av:Size>
-                  <av:PointCollection x:Key="FalseConnector">399.5,360 490,360 490,440 460,440</av:PointCollection>
-                  <av:PointCollection x:Key="TrueConnector">320.5,360 230,360 230,258 260,258</av:PointCollection>
+                  <av:Point x:Key="ShapeLocation">270,439</av:Point>
+                  <av:Size x:Key="ShapeSize">200,22</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">370,461 370,494.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <FlowDecision.False>
-                <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_16">
+              <u:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_9" Message="[&quot;Ok. Did you say &quot; + SearchItem + &quot;? Please answer yes or no to confirm if this is correct&quot;]" Rate="0" Volume="100">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </u:TextToSpeech>
+              <FlowStep.Next>
+                <FlowStep x:Name="__ReferenceID4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">260,429</av:Point>
-                      <av:Size x:Key="ShapeSize">200,22</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">360,451 360,474.5</av:PointCollection>
+                      <av:Point x:Key="ShapeLocation">270,494.5</av:Point>
+                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">370,545.5 370,575.5 370.141666666667,575.5 370.141666666667,595.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <u:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_4" Message="[&quot;Ok. Searching &quot; + SearchItem]" Rate="0" Volume="100">
+                  <p:PythonScope DisplayName="CorrectSearch (Python)" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="PythonScope_6" Path="C:\Program Files (x86)\Python36-32">
+                    <p:PythonScope.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="PythonEngineSessionProperty" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,407" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="p:PythonObject" Name="py_load" />
+                            <Variable x:TypeArguments="p:PythonObject" Name="pymethod" />
+                            <Variable x:TypeArguments="x:Object" Name="pyresult" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <p:LoadScript Code="{x:Null}" DisplayName="Load Python Script" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="LoadScript_7" Result="[py_load]" ScriptFile="asset\python\Speech-To-Text.py" />
+                          <p:InvokeMethod Parameters="{x:Null}" DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="InvokeMethod_6" Instance="[py_load]" Name="SpeechToText" Result="[pymethod]" />
+                          <p:GetObject x:TypeArguments="x:Object" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="GetObject`1_7" PythonObject="[pymethod]" Result="[pyresult]" />
+                          <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[CorrectSearch]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[(pyresult.ToString()).ToLower()]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </ActivityAction>
+                    </p:PythonScope.Body>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                  </u:TextToSpeech>
+                  </p:PythonScope>
                   <FlowStep.Next>
-                    <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_17">
+                    <FlowDecision x:Name="__ReferenceID5" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">260,474.5</av:Point>
-                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <av:Point x:Key="ShapeLocation">330.641666666667,595.5</av:Point>
+                          <av:Size x:Key="ShapeSize">79,87</av:Size>
+                          <av:PointCollection x:Key="TrueConnector">330.641666666667,639 300.641666666667,639 300.641666666667,640 230,640</av:PointCollection>
+                          <av:PointCollection x:Key="FalseConnector">409.641666666667,639 439.641666666667,639 439.641666666667,630 510,630</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Searching" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </Sequence>
-                    </FlowStep>
+                      <FlowDecision.True>
+                        <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_16">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">30,629</av:Point>
+                              <av:Size x:Key="ShapeSize">200,22</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">130,629 130,545.5</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <u:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_4" Message="[&quot;Ok. Searching &quot; + SearchItem]" Rate="0" Volume="100">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </u:TextToSpeech>
+                          <FlowStep.Next>
+                            <FlowStep x:Name="__ReferenceID7">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:Point x:Key="ShapeLocation">30,494.5</av:Point>
+                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Flowchart DisplayName="Searching Youtube" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Flowchart.StartNode>
+                                  <x:Null />
+                                </Flowchart.StartNode>
+                              </Flowchart>
+                            </FlowStep>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowDecision.True>
+                      <FlowDecision.False>
+                        <FlowStep x:Name="__ReferenceID6">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">510,619</av:Point>
+                              <av:Size x:Key="ShapeSize">200,22</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">610,619 610,258 460,258</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <u:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_10" Message="Ok, going back to search" Rate="0" Volume="100">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </u:TextToSpeech>
+                          <FlowStep.Next>
+                            <x:Reference>__ReferenceID0</x:Reference>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowDecision.False>
+                    </FlowDecision>
                   </FlowStep.Next>
                 </FlowStep>
-              </FlowDecision.False>
-            </FlowDecision>
-          </FlowStep.Next>
-        </FlowStep>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowDecision.False>
+        </FlowDecision>
       </FlowStep.Next>
     </FlowStep>
-    <FlowStep sap2010:WorkflowViewState.IdRef="FlowStep_11">
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <FlowStep x:Name="__ReferenceID8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">30,534.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:Point x:Key="ShapeLocation">260,127.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,22</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">360,149.5 360,232.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Opening Youtube" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <u:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_7" Message="Hello, My name is Yubi. I am your personal A.I. who can assist you to search and watch Youtube Videos. What do you want me to search? Before we search for a video, please say the following methods. Speak, Speel or Type. Say your answer after this beep." Rate="10" Volume="100">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-      </Sequence>
+      </u:TextToSpeech>
+      <FlowStep.Next>
+        <x:Reference>__ReferenceID0</x:Reference>
+      </FlowStep.Next>
     </FlowStep>
-    <x:Reference>__ReferenceID0</x:Reference>
-    <x:Reference>__ReferenceID1</x:Reference>
-    <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
-    <FlowStep>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">30,44.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <p:PythonScope DisplayName="Python Scope (Speech To Text)" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="PythonScope_3" Path="C:\Program Files (x86)\Python36-32" TargetPlatform="x64">
-        <p:PythonScope.Body>
-          <ActivityAction x:TypeArguments="x:Object">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="x:Object" Name="PythonEngineSessionProperty" />
-            </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,407" sap2010:WorkflowViewState.IdRef="Sequence_7">
-              <Sequence.Variables>
-                <Variable x:TypeArguments="p:PythonObject" Name="pythonresult" />
-                <Variable x:TypeArguments="p:PythonObject" Name="Py_Load" />
-                <Variable x:TypeArguments="x:Object" Name="SpeechMessageText" />
-              </Sequence.Variables>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <p:LoadScript Code="{x:Null}" DisplayName="Load Python Script" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="LoadScript_4" Result="[Py_Load]" ScriptFile="asset\python\Speech-To-Text.py" />
-              <p:InvokeMethod Parameters="{x:Null}" DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" Instance="[Py_Load]" Name="SpeechToText" Result="[pythonresult]" />
-              <p:GetObject x:TypeArguments="x:Object" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="GetObject`1_4" PythonObject="[pythonresult]" Result="[SpeechMessageText]" />
-              <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_5">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:String">[SearchItem]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">[SpeechMessageText.ToString()]</InArgument>
-                </Assign.Value>
-              </Assign>
-            </Sequence>
-          </ActivityAction>
-        </p:PythonScope.Body>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </p:PythonScope>
-    </FlowStep>
+    <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID5</x:Reference>
+    <x:Reference>__ReferenceID6</x:Reference>
+    <x:Reference>__ReferenceID7</x:Reference>
   </Flowchart>
 </Activity>

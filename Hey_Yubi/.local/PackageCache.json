@@ -94,15 +94,6 @@
     },
     {
       "Package": {
-        "Id": "YubiPackage",
-        "Version": "1.0.4"
-      },
-      "Assemblies": [
-        "C:\\Users\\tony_\\.nuget\\packages\\yubipackage/1.0.4\\lib/UIPathCustom.dll"
-      ]
-    },
-    {
-      "Package": {
         "Id": "UiPath",
         "Version": "10.0.6992.20526"
       },
@@ -140,6 +131,15 @@
         "C:\\Users\\tony_\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/x86/Python.Runtime.34.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/x86/Python.Runtime.35.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\uipath.python.activities/1.1.6863.33404\\lib/net452/x86/Python.Runtime.36.dll"
+      ]
+    },
+    {
+      "Package": {
+        "Id": "YubiPackage",
+        "Version": "1.0.5"
+      },
+      "Assemblies": [
+        "C:\\Users\\tony_\\.nuget\\packages\\yubipackage/1.0.5\\lib/UIPathCustom.dll"
       ]
     }
   ],
@@ -340,7 +340,7 @@
     },
     "YubiPackage": {
       "Id": "YubiPackage",
-      "Version": "1.0.4",
+      "Version": "1.0.5",
       "Dependencies": []
     }
   }

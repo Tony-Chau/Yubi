@@ -443,7 +443,7 @@
           "lib/net452/UiPath.Vision.dll": {}
         }
       },
-      "YubiPackage/1.0.4": {
+      "YubiPackage/1.0.5": {
         "type": "package",
         "compile": {
           "lib/_._": {}
@@ -4151,13 +4151,13 @@
         "uipath.vision.nuspec"
       ]
     },
-    "YubiPackage/1.0.4": {
-      "sha512": "jwlgKrGZ4ae8Ps2P7EZNOmFVHWtiW0NC04/a4d41A0K0GRbPDdSArHq5GpHypjouunu/rnsMpg5HtkrQtFUNHA==",
+    "YubiPackage/1.0.5": {
+      "sha512": "nzZUZl8Gbbzu6vp7OlmXtwJbPr4TwKI1cRxaLKDBrWpWGQxFQgBVRx/T+iyP4cmm0BQ4zzbBguRrUEOOiDXxgw==",
       "type": "package",
-      "path": "yubipackage/1.0.4",
+      "path": "yubipackage/1.0.5",
       "files": [
         "lib/UIPathCustom.dll",
-        "yubipackage.1.0.4.nupkg.sha512",
+        "yubipackage.1.0.5.nupkg.sha512",
         "yubipackage.nuspec"
       ]
     }
@@ -4171,7 +4171,7 @@
       "UiPath.Python.Activities >= 1.1.6863.33404 <= 1.1.6863.33404",
       "UiPath.System.Activities >= 19.2.0 <= 19.2.0",
       "UiPath.UIAutomation.Activities >= 19.2.0 <= 19.2.0",
-      "YubiPackage >= 1.0.4 <= 1.0.4",
+      "YubiPackage >= 1.0.5 <= 1.0.5",
       "python >= 3.7.2 <= 3.7.2",
       "python-embed >= 3.6.1.1 <= 3.6.1.1"
     ]
@@ -4223,7 +4223,7 @@
           "YubiPackage": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.0.4, 1.0.4]"
+            "version": "[1.0.5, 1.0.5]"
           },
           "python": {
             "include": "Runtime",
