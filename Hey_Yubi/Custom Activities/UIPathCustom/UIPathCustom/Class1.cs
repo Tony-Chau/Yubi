@@ -97,19 +97,51 @@ namespace UIPathCustom
             string word = SpelledOutWord.Get(context);
             word.ToLower();
             word.Replace("dot", ".");
+            word.Replace("period", ".");
             word.Replace("dash", "-");
             word.Replace("divide", "/");
+            word.Replace("slash", "/");
             word.Replace("minus", "-");
+            word.Replace("subtract", "-");
             word.Replace("plus", "+");
             word.Replace("add", "+");
             word.Replace("hash", "#");
+            word.Replace("sharp", "#");
             word.Replace("mutiply", "*");
             word.Replace("asterisk", "*");
             word.Replace("under score", "_");
+            word.Replace("at", "@");
 
             word.Replace(" ", "");
             word.Replace("space", " ");
             Result.Set(context, word);
+        }
+    }
+    
+    /// <summary>
+    /// Search in Youtube Query
+    /// </summary>
+    public class SearchYoutube : CodeActivity
+    {
+        /// <summary>
+        /// Query of search
+        /// </summary>
+        [Category("Input")]
+        public InArgument<string> Search { get; set; }
+
+        /// <summary>
+        /// Returns a list of found result (Please turn this into Json format after)
+        /// </summary>
+        [Category("Output")]
+        public OutArgument<string> JsonString { get; set; }
+
+        /// <summary>
+        /// The execution of the code
+        /// </summary>
+        /// <param name="context"></param>
+        protected override void Execute(CodeActivityContext context)
+        {
+            string query = Search.Get(context);
         }
     }
 }
