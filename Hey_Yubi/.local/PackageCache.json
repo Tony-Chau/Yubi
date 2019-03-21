@@ -103,20 +103,6 @@
     },
     {
       "Package": {
-        "Id": "python",
-        "Version": "3.7.2"
-      },
-      "Assemblies": []
-    },
-    {
-      "Package": {
-        "Id": "python-embed",
-        "Version": "3.6.1.1"
-      },
-      "Assemblies": []
-    },
-    {
-      "Package": {
         "Id": "UiPath.Python.Activities",
         "Version": "1.1.6863.33404"
       },
@@ -219,16 +205,6 @@
           "Item2": "[1.0.0, )"
         }
       ]
-    },
-    "python": {
-      "Id": "python",
-      "Version": "3.7.2",
-      "Dependencies": []
-    },
-    "python-embed": {
-      "Id": "python-embed",
-      "Version": "3.6.1.1",
-      "Dependencies": []
     },
     "SharpZipLib": {
       "Id": "SharpZipLib",
