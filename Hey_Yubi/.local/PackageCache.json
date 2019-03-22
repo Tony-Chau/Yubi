@@ -41,7 +41,7 @@
       "Assemblies": [
         "C:\\Users\\tony_\\.nuget\\packages\\csvhelper/2.13.5\\lib/net40-client/CsvHelper.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\microsoft.rest.clientruntime/2.3.10\\lib/net452/Microsoft.Rest.ClientRuntime.dll",
-        "C:\\Users\\tony_\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\newtonsoft.json/12.0.1\\lib/net45/Newtonsoft.Json.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\uipath.system.activities/19.2.0\\lib/net461/ActiproSoftware.Docking.Wpf.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\uipath.system.activities/19.2.0\\lib/net461/ActiproSoftware.Ribbon.Wpf.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\uipath.system.activities/19.2.0\\lib/net461/ActiproSoftware.Shared.Wpf.dll",
@@ -135,18 +135,63 @@
       },
       "Assemblies": [
         "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/CloudrailSI.dll",
-        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/Google.Apis.Auth.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/Google.Apis.Auth.PlatformServices.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/Google.Apis.Auth.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/Google.Apis.Core.dll",
-        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/Google.Apis.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/Google.Apis.PlatformServices.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/Google.Apis.YouTube.v3.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/Google.Apis.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/Google.Protobuf.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/MySql.Data.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/Newtonsoft.Json.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/OpenSSL.PrivateKeyDecoder.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/OpenSSL.X509Certificate2.Provider.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/Yubi V2.dll"
+      ]
+    },
+    {
+      "Package": {
+        "Id": "Newtonsoft.Json",
+        "Version": "12.0.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\tony_\\.nuget\\packages\\newtonsoft.json/12.0.1\\lib/net45/Newtonsoft.Json.dll"
+      ]
+    },
+    {
+      "Package": {
+        "Id": "UiPath.CefSharpBundle",
+        "Version": "1.0.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/CefSharp.BrowserSubprocess.Core.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/CefSharp.Core.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/CefSharp.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/CefSharp.Wpf.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/chrome_elf.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/d3dcompiler_47.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/libcef.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/libEGL.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/libGLESv2.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/msvcp140.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/UiPath.CEFSharpBundle.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/vcruntime140.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/swiftshader/libEGL.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/swiftshader/libGLESv2.dll"
+      ]
+    },
+    {
+      "Package": {
+        "Id": "UiPath.WebAPI.Activities",
+        "Version": "1.4.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\tony_\\.nuget\\packages\\avalonedit/5.0.3\\lib/Net40/ICSharpCode.AvalonEdit.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\newtonsoft.json/12.0.1\\lib/net45/Newtonsoft.Json.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\restsharp/106.3.1\\lib/net452/RestSharp.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.webapi.activities/1.4.0\\lib/net452/UiPath.Web.Activities.Design.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.webapi.activities/1.4.0\\lib/net452/UiPath.Web.Activities.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.webapi.activities/1.4.0\\lib/net452/UiPath.Web.dll"
       ]
     }
   ],
@@ -214,7 +259,7 @@
     },
     "Newtonsoft.Json": {
       "Id": "Newtonsoft.Json",
-      "Version": "11.0.2",
+      "Version": "12.0.1",
       "Dependencies": []
     },
     "NPOI": {
@@ -227,6 +272,11 @@
         }
       ]
     },
+    "RestSharp": {
+      "Id": "RestSharp",
+      "Version": "106.3.1",
+      "Dependencies": []
+    },
     "SharpZipLib": {
       "Id": "SharpZipLib",
       "Version": "1.0.0",
@@ -235,6 +285,11 @@
     "UiPath": {
       "Id": "UiPath",
       "Version": "10.0.6992.20526",
+      "Dependencies": []
+    },
+    "UiPath.CefSharpBundle": {
+      "Id": "UiPath.CefSharpBundle",
+      "Version": "1.0.0",
       "Dependencies": []
     },
     "UiPath.Excel.Activities": {
@@ -334,6 +389,24 @@
       "Id": "UiPath.Vision",
       "Version": "1.3.0",
       "Dependencies": []
+    },
+    "UiPath.WebAPI.Activities": {
+      "Id": "UiPath.WebAPI.Activities",
+      "Version": "1.4.0",
+      "Dependencies": [
+        {
+          "Item1": "AvalonEdit",
+          "Item2": "[5.0.3, )"
+        },
+        {
+          "Item1": "Newtonsoft.Json",
+          "Item2": "[11.0.2, )"
+        },
+        {
+          "Item1": "RestSharp",
+          "Item2": "[106.3.1, )"
+        }
+      ]
     },
     "YubiExtension": {
       "Id": "YubiExtension",
