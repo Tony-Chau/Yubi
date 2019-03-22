@@ -33,6 +33,7 @@ C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities
 C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\Test\bin\Debug\Newtonsoft.Json.xml
 C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\Test\bin\Debug\OpenSSL.PrivateKeyDecoder.xml
 C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\Test\bin\Debug\OpenSSL.X509Certificate2.Provider.xml
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\Test\obj\Debug\Test.csprojAssemblyReference.cache
 C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
 C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\Test\obj\Debug\Test.csproj.CopyComplete
 C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\Test\obj\Debug\Test.exe

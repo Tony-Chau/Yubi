@@ -9,6 +9,7 @@ using System.Speech.Recognition;
 using System.Speech.Synthesis;
 using System.Media;
 using System.IO;
+
 using MySql.Data.MySqlClient;
 
 namespace UIPathCustom
@@ -52,7 +53,7 @@ namespace UIPathCustom
     /// <summary>
     /// Playing the Wav sound activity
     /// </summary>
-    public class PlaySound : CodeActivity
+    public class PlayWav : CodeActivity
     {
         /// <summary>
         /// The path to the wav file
@@ -116,68 +117,6 @@ namespace UIPathCustom
             word.Replace(" ", "");
             word.Replace("space", " ");
             Result.Set(context, word);
-        }
-    }
-    
-    /// <summary>
-    /// Search in Youtube Query
-    /// </summary>
-    public class SearchYoutube : CodeActivity
-    {
-        /// <summary>
-        /// Query of search
-        /// </summary>
-        [Category("Input")]
-        public InArgument<string> Search { get; set; }
-
-        /// <summary>
-        /// Returns a list of found result (Please turn this into Json format after)
-        /// </summary>
-        [Category("Output")]
-        public OutArgument<string> JsonString { get; set; }
-
-        /// <summary>
-        /// The execution of the code
-        /// </summary>
-        /// <param name="context"></param>
-        protected override void Execute(CodeActivityContext context)
-        {
-            string query = Search.Get(context);
-        }
-    }
-
-    public class TestNetAndObtainKey : CodeActivity
-    {
-        [Category("Output")]
-        public OutArgument<string> ApiKey { get; set; }
-
-        protected override void Execute(CodeActivityContext context)
-        {
-            //sql code
-            string connstr = "server=team52truii.heliohost.org;user=truii52_manager;database=truii52_DB;port=3306;password=Midori";
-            bool connected = false;
-            MySqlConnection conn = new MySqlConnection(connstr);
-            try
-            {
-                conn.Open();
-                connected = true;
-                string sql = "SELECT * FROM truii52_DB.ProjectKeys WHERE Name=\"YoutubeAPI\"";
-                MySqlCommand cmd = new MySqlCommand(sql, conn);
-                MySqlDataReader rdr = cmd.ExecuteReader();
-                while (rdr.Read())
-                {
-                    ApiKey.Set(context, rdr[1].ToString());
-                }
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                if (connected)
-                {
-                    conn.Close();
-                }
-                ApiKey.Set(context, "");
-            }
         }
     }
 }
