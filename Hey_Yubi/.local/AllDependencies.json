@@ -437,6 +437,27 @@
           "lib/net452/UiPath.Vision.dll": {}
         }
       },
+      "YubiExtension/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/_._": {}
+        },
+        "runtime": {
+          "lib/CloudrailSI.dll": {},
+          "lib/Google.Apis.Auth.PlatformServices.dll": {},
+          "lib/Google.Apis.Auth.dll": {},
+          "lib/Google.Apis.Core.dll": {},
+          "lib/Google.Apis.PlatformServices.dll": {},
+          "lib/Google.Apis.YouTube.v3.dll": {},
+          "lib/Google.Apis.dll": {},
+          "lib/Google.Protobuf.dll": {},
+          "lib/MySql.Data.dll": {},
+          "lib/Newtonsoft.Json.dll": {},
+          "lib/OpenSSL.PrivateKeyDecoder.dll": {},
+          "lib/OpenSSL.X509Certificate2.Provider.dll": {},
+          "lib/Yubi V2.dll": {}
+        }
+      },
       "YubiPackage/1.0.5": {
         "type": "package",
         "compile": {
@@ -964,6 +985,44 @@
         "uipath.vision.nuspec"
       ]
     },
+    "YubiExtension/1.0.2": {
+      "sha512": "W2/PuZVNHCu61ipb4dtDiXATpCdsAb0cnrVHD5JVSRYYbPfjO5vyceH4W9lph82pNwq1MQAM8WPdLf1mjEzifA==",
+      "type": "package",
+      "path": "yubiextension/1.0.2",
+      "files": [
+        "lib/CloudrailSI.dll",
+        "lib/Google.Apis.Auth.PlatformServices.dll",
+        "lib/Google.Apis.Auth.dll",
+        "lib/Google.Apis.Auth.pdb",
+        "lib/Google.Apis.Auth.xml",
+        "lib/Google.Apis.Core.dll",
+        "lib/Google.Apis.Core.pdb",
+        "lib/Google.Apis.Core.xml",
+        "lib/Google.Apis.PlatformServices.dll",
+        "lib/Google.Apis.YouTube.v3.dll",
+        "lib/Google.Apis.YouTube.v3.pdb",
+        "lib/Google.Apis.YouTube.v3.xml",
+        "lib/Google.Apis.dll",
+        "lib/Google.Apis.pdb",
+        "lib/Google.Apis.xml",
+        "lib/Google.Protobuf.dll",
+        "lib/Google.Protobuf.pdb",
+        "lib/Google.Protobuf.xml",
+        "lib/MySql.Data.dll",
+        "lib/MySql.Data.xml",
+        "lib/Newtonsoft.Json.dll",
+        "lib/Newtonsoft.Json.xml",
+        "lib/OpenSSL.PrivateKeyDecoder.dll",
+        "lib/OpenSSL.PrivateKeyDecoder.xml",
+        "lib/OpenSSL.X509Certificate2.Provider.dll",
+        "lib/OpenSSL.X509Certificate2.Provider.xml",
+        "lib/Yubi V2.dll",
+        "lib/Yubi V2.dll.config",
+        "lib/Yubi V2.pdb",
+        "yubiextension.1.0.2.nupkg.sha512",
+        "yubiextension.nuspec"
+      ]
+    },
     "YubiPackage/1.0.5": {
       "sha512": "nzZUZl8Gbbzu6vp7OlmXtwJbPr4TwKI1cRxaLKDBrWpWGQxFQgBVRx/T+iyP4cmm0BQ4zzbBguRrUEOOiDXxgw==",
       "type": "package",
@@ -984,6 +1043,7 @@
       "UiPath.Python.Activities >= 1.1.6863.33404 <= 1.1.6863.33404",
       "UiPath.System.Activities >= 19.2.0 <= 19.2.0",
       "UiPath.UIAutomation.Activities >= 19.2.0 <= 19.2.0",
+      "YubiExtension >= 1.0.2 <= 1.0.2",
       "YubiPackage >= 1.0.5 <= 1.0.5"
     ]
   },
@@ -1030,6 +1090,11 @@
             "include": "Runtime",
             "target": "Package",
             "version": "[19.2.0, 19.2.0]"
+          },
+          "YubiExtension": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[1.0.2, 1.0.2]"
           },
           "YubiPackage": {
             "include": "Runtime",

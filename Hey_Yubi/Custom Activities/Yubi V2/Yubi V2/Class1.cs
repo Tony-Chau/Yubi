@@ -24,9 +24,10 @@ namespace Yubi_V2
             //sql code
             string key = "";
             string connSTR = "server=team52truii.heliohost.org;user=truii52_manager;database=truii52_DB;port=3306;password=Midori";
-            MySqlConnection conn = new MySqlConnection(connSTR);
+            
             try
             {
+                MySqlConnection conn = new MySqlConnection(connSTR);
                 conn.Open();
                 string sql = "SELECT * FROM truii52_DB.ProjectKeys WHERE Name=\"YoutubeAPI\"";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
