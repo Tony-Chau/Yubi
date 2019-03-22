@@ -14,6 +14,43 @@ using YubiYoutube;
 
 namespace Yubi_V2
 {
+    public class FamiliarWordFixMethod : CodeActivity
+    {
+        [Category("Input")]
+        public InArgument<string> Word { get; set; }
+
+        [Category("Output")]
+        public OutArgument<string> Fixedupword {get; set;}
+
+        protected override void Execute(CodeActivityContext context)
+        {
+            string word = Word.Get(context);
+            if (word == "right" || word == "wright" || word == "bright"
+                || word == "byte" || word == "fright" || word == "plight"
+                || word == "sleight" || word == "white" || word == "wight")
+            {
+                Fixedupword.Set(context, "write");
+                return;
+            }
+            if (word == "bell" || word == "bel" || word == "quell"
+                || word == "pell" || word == "stell" || word == "sell"
+                || word == "swell" || word == "stele" || word == "tell")
+            {
+                Fixedupword.Set(context, "spell");
+                return;
+            }
+            if (word == "beak" || word == "bleak" || word == "cheek"
+                || word == "geek" || word == "peek" || word == "freak"
+                || word == "seek" || word == "sleek" || word == "streak"
+                || word == "week" || word == "squeak" || word == "shiek"
+                || word == "sneak" || word == "tweak" || word == "week")
+            {
+                Fixedupword.Set(context, "speak");
+                return;
+            }
+            Fixedupword.Set(context, word);
+        }
+    }
     public class RetrieveAPIKey : CodeActivity
     {
         [Category("Output")]
