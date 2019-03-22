@@ -27,3 +27,7 @@ C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities
 C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\Youtube\obj\Debug\Youtube.csproj.CopyComplete
 C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\Youtube\obj\Debug\Youtube.exe
 C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\Youtube\obj\Debug\Youtube.pdb
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\Youtube\bin\Debug\Google.Protobuf.dll
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\Youtube\bin\Debug\MySql.Data.dll
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\Youtube\bin\Debug\Google.Protobuf.xml
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\Youtube\bin\Debug\MySql.Data.xml

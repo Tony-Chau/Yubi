@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using MySql.Data;
+using MySql.Data.MySqlClient;
+
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Services;
 using Google.Apis.Upload;
@@ -36,14 +39,33 @@ namespace Youtube
 
         private async Task Run()
         {
+            //sql code
+            string key = "";
+            string connSTR = "server=team52truii.heliohost.org;user=truii52_manager;database=truii52_DB;port=3306;password=Midori";
+            MySqlConnection conn = new MySqlConnection(connSTR);
+            try
+            {
+                conn.Open();
+                string sql = "SELECT * FROM truii52_DB.ProjectKeys WHERE Name=\"YoutubeAPI\"";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    key = rdr[1].ToString();
+                }
+            }catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+
             var youtubeService = new YouTubeService(new BaseClientService.Initializer()
             {
-                ApiKey = "AIzaSyBnZWoU3n6sDYKz7UzB-5JuzUNJnlVLw7E",
+                ApiKey = key,
                 ApplicationName = this.GetType().ToString()
             });
 
             var searchListRequest = youtubeService.Search.List("snippet");
-            searchListRequest.Q = "Google"; // Your query. Literally your search
+            searchListRequest.Q = "Pewdiepie"; // Your query. Literally your search
             searchListRequest.MaxResults = 50;
 
             //Call the search.list method to retrieve results matching the specific query term
