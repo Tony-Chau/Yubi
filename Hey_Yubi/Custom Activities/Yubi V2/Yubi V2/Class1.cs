@@ -10,7 +10,7 @@ using Google.Apis.Services;
 using Google.Apis.Util.Store;
 using Google.Apis.YouTube.v3;
 using Google.Apis.YouTube.v3.Data;
-using Youtube; //My file
+using YubiYoutube;
 
 namespace Yubi_V2
 {
@@ -61,8 +61,7 @@ namespace Yubi_V2
             string search = Search.Get(context);
             string apikey = ApiKey.Get(context);
             YoutubeSearcherClass searchclass = new YoutubeSearcherClass(search, apikey);
-            string json = searchclass.GetSearchResult();
-            Json.Set(context, json);
+            Json.Set(context, searchclass.GetSearchResult());
         }
 
     }

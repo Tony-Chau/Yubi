@@ -10,7 +10,7 @@
     "UiPath": "[10.0.6992.20526]",
     "UiPath.Python.Activities": "[1.1.6863.33404]",
     "YubiPackage": "[1.0.5]",
-    "YubiExtension": "[1.0.2]"
+    "YubiExtension": "[1.0.3]"
   },
   "schemaVersion": "3.2",
   "studioVersion": "19.2.0.0",

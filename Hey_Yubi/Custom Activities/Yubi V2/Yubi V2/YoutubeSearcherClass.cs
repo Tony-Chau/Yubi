@@ -15,7 +15,7 @@ using Google.Apis.YouTube.v3;
 using Google.Apis.YouTube.v3.Data;
 using System.Web.Script.Serialization;
 
-namespace Youtube
+namespace YubiYoutube
 {
     internal class YoutubeSearcherClass
     {
