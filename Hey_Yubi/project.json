@@ -10,10 +10,10 @@
     "UiPath": "[10.0.6992.20526]",
     "UiPath.Python.Activities": "[1.1.6863.33404]",
     "YubiPackage": "[1.0.5]",
-    "YubiExtension": "[1.0.3]",
     "Newtonsoft.Json": "[12.0.1]",
     "UiPath.CefSharpBundle": "[1.0.0]",
-    "UiPath.WebAPI.Activities": "[1.4.0]"
+    "UiPath.WebAPI.Activities": "[1.4.0]",
+    "YubiExtension": "[1.1.0]"
   },
   "schemaVersion": "3.2",
   "studioVersion": "19.2.0.0",

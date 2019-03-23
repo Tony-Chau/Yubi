@@ -130,27 +130,6 @@
     },
     {
       "Package": {
-        "Id": "YubiExtension",
-        "Version": "1.0.3"
-      },
-      "Assemblies": [
-        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/CloudrailSI.dll",
-        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/Google.Apis.Auth.PlatformServices.dll",
-        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/Google.Apis.Auth.dll",
-        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/Google.Apis.Core.dll",
-        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/Google.Apis.PlatformServices.dll",
-        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/Google.Apis.YouTube.v3.dll",
-        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/Google.Apis.dll",
-        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/Google.Protobuf.dll",
-        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/MySql.Data.dll",
-        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/Newtonsoft.Json.dll",
-        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/OpenSSL.PrivateKeyDecoder.dll",
-        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/OpenSSL.X509Certificate2.Provider.dll",
-        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.0.3\\lib/Yubi V2.dll"
-      ]
-    },
-    {
-      "Package": {
         "Id": "Newtonsoft.Json",
         "Version": "12.0.1"
       },
@@ -166,18 +145,18 @@
       "Assemblies": [
         "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/CefSharp.BrowserSubprocess.Core.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/CefSharp.Core.dll",
-        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/CefSharp.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/CefSharp.Wpf.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/CefSharp.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/UiPath.CEFSharpBundle.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/chrome_elf.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/d3dcompiler_47.dll",
-        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/libcef.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/libEGL.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/libGLESv2.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/libcef.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/msvcp140.dll",
-        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/UiPath.CEFSharpBundle.dll",
-        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/vcruntime140.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/swiftshader/libEGL.dll",
-        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/swiftshader/libGLESv2.dll"
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/swiftshader/libGLESv2.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath.cefsharpbundle/1.0.0\\lib/net452/vcruntime140.dll"
       ]
     },
     {
@@ -192,6 +171,27 @@
         "C:\\Users\\tony_\\.nuget\\packages\\uipath.webapi.activities/1.4.0\\lib/net452/UiPath.Web.Activities.Design.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\uipath.webapi.activities/1.4.0\\lib/net452/UiPath.Web.Activities.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\uipath.webapi.activities/1.4.0\\lib/net452/UiPath.Web.dll"
+      ]
+    },
+    {
+      "Package": {
+        "Id": "YubiExtension",
+        "Version": "1.1.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.1.0\\lib/CloudrailSI.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.1.0\\lib/Google.Apis.Auth.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.1.0\\lib/Google.Apis.Auth.PlatformServices.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.1.0\\lib/Google.Apis.Core.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.1.0\\lib/Google.Apis.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.1.0\\lib/Google.Apis.PlatformServices.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.1.0\\lib/Google.Apis.YouTube.v3.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.1.0\\lib/Google.Protobuf.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.1.0\\lib/MySql.Data.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.1.0\\lib/Newtonsoft.Json.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.1.0\\lib/OpenSSL.PrivateKeyDecoder.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.1.0\\lib/OpenSSL.X509Certificate2.Provider.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.1.0\\lib/Yubi V2.dll"
       ]
     }
   ],
@@ -410,7 +410,7 @@
     },
     "YubiExtension": {
       "Id": "YubiExtension",
-      "Version": "1.0.3",
+      "Version": "1.1.0",
       "Dependencies": []
     },
     "YubiPackage": {

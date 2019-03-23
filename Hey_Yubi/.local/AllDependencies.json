@@ -508,7 +508,7 @@
           }
         }
       },
-      "YubiExtension/1.0.3": {
+      "YubiExtension/1.1.0": {
         "type": "package",
         "compile": {
           "lib/_._": {}
@@ -1187,10 +1187,10 @@
         "uipath.webapi.activities.nuspec"
       ]
     },
-    "YubiExtension/1.0.3": {
-      "sha512": "xddtB7j4PwPRiJKhM7fmX1SfpRHifIB40m9GLm69D7BUYQGltP7bGlQZHnGIYgOywhJ9rk5qCyqaUvQesC7YYw==",
+    "YubiExtension/1.1.0": {
+      "sha512": "PCC5klgk0AMnzRc8ZYTA1n9JZXCB0Uclm0gSw5pmxDXRCKK25By97gDpGPxS6LUOscNMXFJNO/lUQ3f1zXUt2Q==",
       "type": "package",
-      "path": "yubiextension/1.0.3",
+      "path": "yubiextension/1.1.0",
       "files": [
         "lib/CloudrailSI.dll",
         "lib/Google.Apis.Auth.PlatformServices.dll",
@@ -1221,7 +1221,7 @@
         "lib/Yubi V2.dll",
         "lib/Yubi V2.dll.config",
         "lib/Yubi V2.pdb",
-        "yubiextension.1.0.3.nupkg.sha512",
+        "yubiextension.1.1.0.nupkg.sha512",
         "yubiextension.nuspec"
       ]
     },
@@ -1248,7 +1248,7 @@
       "UiPath.System.Activities >= 19.2.0 <= 19.2.0",
       "UiPath.UIAutomation.Activities >= 19.2.0 <= 19.2.0",
       "UiPath.WebAPI.Activities >= 1.4.0 <= 1.4.0",
-      "YubiExtension >= 1.0.3 <= 1.0.3",
+      "YubiExtension >= 1.1.0 <= 1.1.0",
       "YubiPackage >= 1.0.5 <= 1.0.5"
     ]
   },
@@ -1314,7 +1314,7 @@
           "YubiExtension": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.0.3, 1.0.3]"
+            "version": "[1.1.0, 1.1.0]"
           },
           "YubiPackage": {
             "include": "Runtime",

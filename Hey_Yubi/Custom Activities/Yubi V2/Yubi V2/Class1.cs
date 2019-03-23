@@ -5,12 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Activities;
 using System.ComponentModel;
+using MySql.Data;
 using MySql.Data.MySqlClient;
-using Google.Apis.Services;
-using Google.Apis.Util.Store;
-using Google.Apis.YouTube.v3;
-using Google.Apis.YouTube.v3.Data;
-using YubiYoutube;
 
 namespace Yubi_V2
 {
@@ -80,26 +76,5 @@ namespace Yubi_V2
             }
             ApiKey.Set(context, key);
         }
-    }
-
-    public class YoutubeSearch : CodeActivity
-    {
-        [Category("Input")]
-        public InArgument<string> Search { get; set; }
-
-        [Category("Input")]
-        public InArgument<string> ApiKey { get; set; }
-
-        [Category("Output")]
-        public OutArgument<string> Json { get; set; }
-
-        protected override void Execute(CodeActivityContext context)
-        {
-            string search = Search.Get(context);
-            string apikey = ApiKey.Get(context);
-            YoutubeSearcherClass searchclass = new YoutubeSearcherClass(search, apikey);
-            Json.Set(context, searchclass.GetSearchResult());
-        }
-
     }
 }

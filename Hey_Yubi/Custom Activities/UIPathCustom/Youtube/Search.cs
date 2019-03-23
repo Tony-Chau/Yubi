@@ -13,7 +13,7 @@ using Google.Apis.Upload;
 using Google.Apis.Util.Store;
 using Google.Apis.YouTube.v3;
 using Google.Apis.YouTube.v3.Data;
-
+using Newtonsoft.Json;
 
 namespace Youtube
 {
@@ -67,23 +67,27 @@ namespace Youtube
 
             var searchListRequest = youtubeService.Search.List("snippet");
             searchListRequest.Q = "Pewdiepie"; // Your query. Literally your search
-            searchListRequest.MaxResults = 50;
+            searchListRequest.MaxResults = 2;
 
             //Call the search.list method to retrieve results matching the specific query term
             var searchListResponse = await searchListRequest.ExecuteAsync();
 
             List<string> vid = new List<string>();
+            IList<SearchResult> list = new List<SearchResult>();
 
             foreach (var SearchResult in searchListResponse.Items)
             {
                 if (SearchResult.Id.Kind == "youtube#video")
                 {
+                    list.Add(SearchResult);
                     vid.Add(string.Format("{0} {1} ", SearchResult.Snippet.Title, SearchResult.Id.VideoId));
 
                 }
             }
-
-            Console.WriteLine(string.Format("Videos:\n{0}\n", string.Join("\n", vid)));
+            var result = JsonConvert.SerializeObject(list);
+            Console.WriteLine(result.ToString());
+            //Console.WriteLine(string.Format("Videos:\n{0}\n", string.Join("\n", vid)));
+            Console.WriteLine("End");
         }
     }
 }
