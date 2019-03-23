@@ -13,7 +13,7 @@
     "Newtonsoft.Json": "[12.0.1]",
     "UiPath.CefSharpBundle": "[1.0.0]",
     "UiPath.WebAPI.Activities": "[1.4.0]",
-    "YubiExtension": "[1.1.0]"
+    "YubiExtension": "[1.1.1]"
   },
   "schemaVersion": "3.2",
   "studioVersion": "19.2.0.0",

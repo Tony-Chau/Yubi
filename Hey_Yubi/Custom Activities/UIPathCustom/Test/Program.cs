@@ -13,6 +13,7 @@ using System.IO;
 using Google.Apis.Services;
 using Google.Apis.YouTube.v3;
 using Google.Apis.YouTube.v3.Data;
+using System.Windows.Forms;
 
 /// <summary>
 /// The Test file is there to help me what program is needed 
@@ -24,7 +25,14 @@ namespace Test
     {
         static void Main(string[] args)
         {
-           
+            Form frm = new Form();
+            PictureBox pb = new PictureBox();
+            Label l = new Label();
+            l.Text = "Green";
+            Application.Run(frm);
+            
+            Application.Exit();
+            Console.ReadKey();
         }
 
     }

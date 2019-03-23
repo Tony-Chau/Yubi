@@ -7,6 +7,9 @@ using System.Activities;
 using System.ComponentModel;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.Drawing;
+using System.Net;
+using System.IO;
 
 namespace Yubi_V2
 {
@@ -75,6 +78,25 @@ namespace Yubi_V2
                 Console.WriteLine(ex.ToString());
             }
             ApiKey.Set(context, key);
+        }
+    }
+    public class ImageUrlToImage : CodeActivity
+    {
+        [Category("Input")]
+        public InArgument<string> ImageUrl { get; set; }
+
+        [Category("Output")]
+        public OutArgument<Image> ImageResult { get; set; }
+
+        protected override void Execute(CodeActivityContext context)
+        {
+            string imageurl = ImageUrl.Get(context);
+            WebClient client = new WebClient();
+            byte[] imagebyte = client.DownloadData(imageurl);
+            MemoryStream stream = new MemoryStream(imagebyte);
+            Image img = Image.FromStream(stream);
+            ImageResult.Set(context, img);
+
         }
     }
 }
