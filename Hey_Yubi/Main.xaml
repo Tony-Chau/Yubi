@@ -1015,7 +1015,6 @@
                                                         </FlowStep>
                                                       </FlowStep.Next>
                                                     </FlowStep>
-                                                    <x:Reference>__ReferenceID8<x:Key></x:Key></x:Reference>
                                                     <FlowStep x:Key="play" x:Name="__ReferenceID17">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
