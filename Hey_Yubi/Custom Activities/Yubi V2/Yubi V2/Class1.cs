@@ -10,6 +10,8 @@ using MySql.Data.MySqlClient;
 using System.Drawing;
 using System.Net;
 using System.IO;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace Yubi_V2
 {
@@ -97,6 +99,21 @@ namespace Yubi_V2
             Image img = Image.FromStream(stream);
             ImageResult.Set(context, img);
 
+        }
+    }
+    public class JsonScriptToJsonObject : CodeActivity
+    {
+        [Category("Input")]
+        public InArgument<string> JsonScript { get; set; }
+
+        [Category("Output")]
+        public OutArgument<JObject> JsonObject { get; set; }
+
+        protected override void Execute(CodeActivityContext context)
+        {
+            string script = JsonScript.Get(context);
+            JObject result = JObject.Parse(script);
+            JsonObject.Set(context, result);
         }
     }
 }

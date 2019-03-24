@@ -3,17 +3,14 @@
   "description": "Youtube API AI",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.UIAutomation.Activities": "[19.2.0]",
-    "UiPath.System.Activities": "[19.2.0]",
-    "UiPath.Excel.Activities": "[2.5.2]",
-    "UiPath.Mail.Activities": "[1.3.0]",
-    "UiPath": "[10.0.6992.20526]",
     "UiPath.Python.Activities": "[1.1.6863.33404]",
     "YubiPackage": "[1.0.5]",
-    "Newtonsoft.Json": "[12.0.1]",
     "UiPath.CefSharpBundle": "[1.0.0]",
     "UiPath.WebAPI.Activities": "[1.4.0]",
-    "YubiExtension": "[1.1.1]"
+    "YubiExtension": "[1.1.3]",
+    "UiPath.UIAutomation.Activities": "[19.3.0]",
+    "UiPath.System.Activities": "[19.3.0]",
+    "UiPath": "[10.0.7004.31775]"
   },
   "schemaVersion": "3.2",
   "studioVersion": "19.2.0.0",
