@@ -82,6 +82,9 @@
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
+      "JObject/1.0.0": {
+        "type": "package"
+      },
       "Microsoft.Rest.ClientRuntime/2.3.10": {
         "type": "package",
         "dependencies": {
@@ -102,6 +105,15 @@
         "runtime": {
           "lib/net45/Newtonsoft.Json.dll": {}
         }
+      },
+      "NuGet.Modules.JObjectExtensions/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "NuGet.Modules.ReflectionExtensions": "1.0.1"
+        }
+      },
+      "NuGet.Modules.ReflectionExtensions/1.0.1": {
+        "type": "package"
       },
       "RestSharp/106.3.1": {
         "type": "package",
@@ -453,6 +465,17 @@
         "lib/netstandard2.0/Humanizer.xml"
       ]
     },
+    "JObject/1.0.0": {
+      "sha512": "/b7+Qy+kYwHtwYamgnDVA3Q1rS6/E2Sf2ce32oTb0ET2hUguei3zVoAz1FrSYMV6M5TimzAEqeogniAniTgfvQ==",
+      "type": "package",
+      "path": "jobject/1.0.0",
+      "files": [
+        ".signature.p7s",
+        "jobject.1.0.0.nupkg.sha512",
+        "jobject.nuspec",
+        "lib/netcoreapp2.0/JObject.dll"
+      ]
+    },
     "Microsoft.Rest.ClientRuntime/2.3.10": {
       "sha512": "a30J6t7LRkYx974tLaRnJc/dYZ1M7uhc5vdgULxdhL7HJNJydG7e+jyAVD15gK+vFR1i9MH+5Ch9t1zhb/Lp1g==",
       "type": "package",
@@ -496,6 +519,28 @@
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "newtonsoft.json.11.0.2.nupkg.sha512",
         "newtonsoft.json.nuspec"
+      ]
+    },
+    "NuGet.Modules.JObjectExtensions/1.0.1": {
+      "sha512": "bYefCs/PliiDvrUqoDQ4z3dH6pC1WAh7+Ew9ThOt09GIWeHIgf+xNa0mnBsYFctLkAqNHFPWFYbEbL1+hTB1NA==",
+      "type": "package",
+      "path": "nuget.modules.jobjectextensions/1.0.1",
+      "files": [
+        ".signature.p7s",
+        "content/NuGet.Modules/JObjectExtensions.cs",
+        "nuget.modules.jobjectextensions.1.0.1.nupkg.sha512",
+        "nuget.modules.jobjectextensions.nuspec"
+      ]
+    },
+    "NuGet.Modules.ReflectionExtensions/1.0.1": {
+      "sha512": "Zk/0vsDD1hktnkRus49j0kiGEgSblFk7mLVUfJCCQyWIMn6xtWI2gSFuDEyH8yN9ZkPvjr+VX1xzrnyCh9IoSw==",
+      "type": "package",
+      "path": "nuget.modules.reflectionextensions/1.0.1",
+      "files": [
+        ".signature.p7s",
+        "content/NuGet.Modules/ReflectionExtensions.cs",
+        "nuget.modules.reflectionextensions.1.0.1.nupkg.sha512",
+        "nuget.modules.reflectionextensions.nuspec"
       ]
     },
     "RestSharp/106.3.1": {
@@ -911,6 +956,8 @@
   "projectFileDependencyGroups": {
     "": [],
     ".NETFramework,Version=v4.6.1": [
+      "JObject >= 1.0.0 <= 1.0.0",
+      "NuGet.Modules.JObjectExtensions >= 1.0.1 <= 1.0.1",
       "UiPath >= 10.0.7004.31775 <= 10.0.7004.31775",
       "UiPath.CefSharpBundle >= 1.0.0 <= 1.0.0",
       "UiPath.Python.Activities >= 1.1.6863.33404 <= 1.1.6863.33404",
@@ -935,6 +982,16 @@
     "frameworks": {
       "net461": {
         "dependencies": {
+          "JObject": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[1.0.0, 1.0.0]"
+          },
+          "NuGet.Modules.JObjectExtensions": {
+            "include": "Runtime",
+            "target": "Package",
+            "version": "[1.0.1, 1.0.1]"
+          },
           "UiPath": {
             "include": "Runtime",
             "target": "Package",
@@ -978,5 +1035,16 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package JObject 1.0.0 is not compatible with net461 (.NETFramework,Version=v4.6.1). Package JObject 1.0.0 supports: netcoreapp2.0 (.NETCoreApp,Version=v2.0)",
+      "libraryId": "JObject",
+      "targetGraphs": [
+        ".NETFramework,Version=v4.6.1"
+      ]
+    }
+  ]
 }

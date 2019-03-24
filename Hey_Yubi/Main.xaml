@@ -13,7 +13,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>921,1117</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>921,1077</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -737,27 +737,31 @@
                       <Sequence DisplayName="Managing Json to DT" sap:VirtualizedContainerService.HintSize="336,1165" sap2010:WorkflowViewState.IdRef="Sequence_14">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="njl:JArray" Name="JArray" />
+                          <Variable x:TypeArguments="njl:JArray" Name="JsonArray" />
+                          <Variable x:TypeArguments="sd:DataTable" Name="JTable" />
+                          <Variable x:TypeArguments="x:String" Name="ConvToItem" />
+                          <Variable x:TypeArguments="njl:JObject" Name="JsonItems" />
                         </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[JsonObject]" JsonString="[jsonString]" />
+                        <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_3" JsonObject="[JsonObject]" JsonString="[jsonString]" />
                         <ui:BuildDataTable DataTable="[JsonDataTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;ID&quot; msdata:AutoIncrement=&quot;true&quot; type=&quot;xs:int&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Title&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;vidID&quot; type=&quot;xs:string&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ImageUrl&quot; type=&quot;xs:string&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-                        <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" DisplayName="Add each data" sap:VirtualizedContainerService.HintSize="314,680" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[jsonObject(&quot;Items&quot;)]">
+                        <ui:ForEach x:TypeArguments="njl:JObject" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="314,680" sap2010:WorkflowViewState.IdRef="ForEach`1_9" Values="[JsonObject(&quot;items&quot;)]">
                           <ui:ForEach.Body>
                             <ActivityAction x:TypeArguments="njl:JObject">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="njl:JObject" Name="item" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="264,546" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="264,546" sap2010:WorkflowViewState.IdRef="Sequence_28">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_32">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="sd:DataRow">[dr]</OutArgument>
                                   </Assign.To>
@@ -765,40 +769,34 @@
                                     <InArgument x:TypeArguments="sd:DataRow">[JsonDataTable.NewRow]</InArgument>
                                   </Assign.Value>
                                 </Assign>
-                                <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_11">
-                                  <Assign.To>
-                                    <OutArgument x:TypeArguments="x:Object">[dr("vidID")]</OutArgument>
-                                  </Assign.To>
-                                  <Assign.Value>
-                                    <InArgument x:TypeArguments="x:Object">[item("Id")("videoId")]</InArgument>
-                                  </Assign.Value>
-                                </Assign>
-                                <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_12">
-                                  <Assign.To>
-                                    <OutArgument x:TypeArguments="x:Object">[dr("ImageUrl")]</OutArgument>
-                                  </Assign.To>
-                                  <Assign.Value>
-                                    <InArgument x:TypeArguments="x:Object">[item("snippet")("thumbnails")("high")("url")]</InArgument>
-                                  </Assign.Value>
-                                </Assign>
-                                <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_33">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:Object">[dr("Title")]</OutArgument>
                                   </Assign.To>
                                   <Assign.Value>
-                                    <InArgument x:TypeArguments="x:Object">[item("snippet")("title")]</InArgument>
+                                    <InArgument x:TypeArguments="x:Object">[item("snippet")("title").ToString]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_34">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Object">[dr("vidID")]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[item("id")("videoId").ToString]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_35">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Object">[dr("ImageUrl")]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[item("snippet")("thumbnails")("high")("url").ToString]</InArgument>
                                   </Assign.Value>
                                 </Assign>
                                 <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[dr]" DataTable="[JsonDataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="242,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                               </Sequence>
                             </ActivityAction>
                           </ui:ForEach.Body>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
                         </ui:ForEach>
                         <u:TextToSpeech DisplayName="Confirmation result" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_25" Message="[string.Format(&quot;Ok. I have found around {0} results&quot;, JsonDataTable.Rows.Count)]" Rate="0" Volume="100">
                           <sap:WorkflowViewStateService.ViewState>

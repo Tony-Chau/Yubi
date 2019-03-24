@@ -156,6 +156,20 @@
       "Assemblies": [
         "C:\\Users\\tony_\\.nuget\\packages\\uipath/10.0.7004.31775\\lib/UiPath.Interop.dll"
       ]
+    },
+    {
+      "Package": {
+        "Id": "JObject",
+        "Version": "1.0.0"
+      },
+      "Assemblies": []
+    },
+    {
+      "Package": {
+        "Id": "NuGet.Modules.JObjectExtensions",
+        "Version": "1.0.1"
+      },
+      "Assemblies": []
     }
   ],
   "Conflicts": [],
@@ -180,6 +194,11 @@
       "Version": "2.4.2",
       "Dependencies": []
     },
+    "JObject": {
+      "Id": "JObject",
+      "Version": "1.0.0",
+      "Dependencies": []
+    },
     "Microsoft.Rest.ClientRuntime": {
       "Id": "Microsoft.Rest.ClientRuntime",
       "Version": "2.3.10",
@@ -193,6 +212,21 @@
     "Newtonsoft.Json": {
       "Id": "Newtonsoft.Json",
       "Version": "11.0.2",
+      "Dependencies": []
+    },
+    "NuGet.Modules.JObjectExtensions": {
+      "Id": "NuGet.Modules.JObjectExtensions",
+      "Version": "1.0.1",
+      "Dependencies": [
+        {
+          "Item1": "NuGet.Modules.ReflectionExtensions",
+          "Item2": "[1.0.1, )"
+        }
+      ]
+    },
+    "NuGet.Modules.ReflectionExtensions": {
+      "Id": "NuGet.Modules.ReflectionExtensions",
+      "Version": "1.0.1",
       "Dependencies": []
     },
     "RestSharp": {
