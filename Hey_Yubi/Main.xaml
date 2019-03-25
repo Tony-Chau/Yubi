@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>921,1077</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>921,1117</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -822,7 +822,7 @@
                               <av:PointCollection x:Key="ConnectorLocation">710,435.5 710,466.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Flowchart DisplayName="Showing boxes" sap:VirtualizedContainerService.HintSize="705,636" sap2010:WorkflowViewState.IdRef="Flowchart_4">
+                          <Flowchart DisplayName="Showing boxes" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_4">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -937,7 +937,7 @@
                                                 <Sequence.Variables>
                                                   <Variable x:TypeArguments="p:PythonObject" Name="pyload" />
                                                   <Variable x:TypeArguments="p:PythonObject" Name="pyResult" />
-                                                  <Variable x:TypeArguments="x:Object" Name="pyResponse" />
+                                                  <Variable x:TypeArguments="x:String" Name="pyResponse" />
                                                 </Sequence.Variables>
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -947,7 +947,7 @@
                                                 <p:LoadScript Code="{x:Null}" DisplayName="Load Python Script" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="LoadScript_7" Result="[pyload]" ScriptFile="asset\python\Speech-To-Text.py" />
                                                 <u:PlaySound DisplayName="Play beep" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="PlaySound_14" filepath="asset\wav\beep-07.wav" />
                                                 <p:InvokeMethod Parameters="{x:Null}" DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="InvokeMethod_7" Instance="[pyload]" Name="SpeechToText" Result="[pyResult]" />
-                                                <p:GetObject x:TypeArguments="x:Object" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="GetObject`1_7" PythonObject="[pyResult]" Result="[pyResponse]" />
+                                                <p:GetObject x:TypeArguments="x:String" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="GetObject`1_8" PythonObject="[pyResult]" Result="[pyResponse]" />
                                                 <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_17">
                                                   <Assign.To>
                                                     <OutArgument x:TypeArguments="x:String">[result]</OutArgument>
@@ -1674,7 +1674,7 @@
                   <OutArgument x:TypeArguments="x:String">[SearchItem]</OutArgument>
                 </Assign.To>
                 <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">One Piece</InArgument>
+                  <InArgument x:TypeArguments="x:String">Overwatch Cinematics</InArgument>
                 </Assign.Value>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
