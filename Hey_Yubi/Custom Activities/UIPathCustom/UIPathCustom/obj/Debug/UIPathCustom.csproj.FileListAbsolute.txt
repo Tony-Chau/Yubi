@@ -1,0 +1,26 @@
+C:\Users\tony_\source\repos\UIPathCustom\UIPathCustom\bin\Debug\UIPathCustom.dll
+C:\Users\tony_\source\repos\UIPathCustom\UIPathCustom\bin\Debug\UIPathCustom.pdb
+C:\Users\tony_\source\repos\UIPathCustom\UIPathCustom\obj\Debug\UIPathCustom.csproj.CoreCompileInputs.cache
+C:\Users\tony_\source\repos\UIPathCustom\UIPathCustom\obj\Debug\UIPathCustom.dll
+C:\Users\tony_\source\repos\UIPathCustom\UIPathCustom\obj\Debug\UIPathCustom.pdb
+C:\Users\tony_\source\repos\UIPathCustom\UIPathCustom\obj\Debug\UIPathCustom.csprojAssemblyReference.cache
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\bin\Debug\UIPathCustom.dll.config
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\bin\Debug\UIPathCustom.dll
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\bin\Debug\UIPathCustom.pdb
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\bin\Debug\CloudrailSI.dll
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\bin\Debug\Google.Protobuf.dll
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\bin\Debug\MySql.Data.dll
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\bin\Debug\Newtonsoft.Json.dll
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\bin\Debug\OpenSSL.PrivateKeyDecoder.dll
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\bin\Debug\OpenSSL.X509Certificate2.Provider.dll
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\bin\Debug\Google.Protobuf.pdb
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\bin\Debug\Google.Protobuf.xml
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\bin\Debug\MySql.Data.xml
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\bin\Debug\Newtonsoft.Json.xml
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\bin\Debug\OpenSSL.PrivateKeyDecoder.xml
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\bin\Debug\OpenSSL.X509Certificate2.Provider.xml
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\obj\Debug\UIPathCustom.csprojAssemblyReference.cache
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\obj\Debug\UIPathCustom.csproj.CoreCompileInputs.cache
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\obj\Debug\UIPathCustom.csproj.CopyComplete
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\obj\Debug\UIPathCustom.dll
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\UIPathCustom\UIPathCustom\obj\Debug\UIPathCustom.pdb
