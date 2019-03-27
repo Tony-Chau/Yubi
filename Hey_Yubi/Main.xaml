@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>921,1117</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>921,1077</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -822,7 +822,7 @@
                               <av:PointCollection x:Key="ConnectorLocation">710,435.5 710,466.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Flowchart DisplayName="Showing boxes" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_4">
+                          <Flowchart DisplayName="Showing boxes" sap:VirtualizedContainerService.HintSize="705,636" sap2010:WorkflowViewState.IdRef="Flowchart_4">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -843,7 +843,7 @@
                                   <av:PointCollection x:Key="ConnectorLocation">300,141 300,191</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <u:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_26" Message="Ok. I will now show you thumbnails of videos in a box. Please say next or back when the image appears. If the thumbnail is the video you want to watch, please say play. If you do not wish to watch the video, please say close. Say your answer after this beep " Rate="10" Volume="100" />
+                              <u:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_26" Message="Ok. I will show you a box. You have 3 to respond. Please say either back, next, play or close. Saying close will shutdown this program. Please respond after this beep. " Rate="10" Volume="100" />
                               <FlowStep.Next>
                                 <FlowStep x:Name="__ReferenceID18">
                                   <sap:WorkflowViewStateService.ViewState>
@@ -857,6 +857,7 @@
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:Int32" Name="Index" />
                                       <Variable x:TypeArguments="sd:DataTable" Name="RowDataTable" />
+                                      <Variable x:TypeArguments="x:String" Name="timer" />
                                     </Sequence.Variables>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -891,12 +892,13 @@
                                       </ui:FilterDataTable.SelectColumns>
                                     </ui:FilterDataTable>
                                     <y:ImageUrlToImage DisplayName="Image url to image" sap:VirtualizedContainerService.HintSize="658,22" sap2010:WorkflowViewState.IdRef="ImageUrlToImage_1" ImageResult="[LoadedImage]" ImageUrl="[JsonDataTable.Rows(Index).Item(&quot;ImageUrl&quot;).ToString]" />
-                                    <ui:InvokeCode ContinueOnError="{x:Null}" Code="picturebox = New PictureBox()&#xA;picturebox.Image = Image&#xA;picturebox.Dock = DockStyle.Fill&#xA;&#xA;frm = New Form()&#xA;frm.ClientSize = New System.Drawing.Size(picturebox.Image.Width, picturebox.Image.Height)&#xA;frm.TopMost = True&#xA;frm.Text = Name&#xA;frm.Controls.Add(picturebox)&#xA;frm.ShowDialog()" DisplayName="Showing Box" sap:VirtualizedContainerService.HintSize="658,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+                                    <ui:InvokeCode ContinueOnError="{x:Null}" Code="picturebox = New PictureBox()&#xD;&#xA;picturebox.Image = Image&#xD;&#xA;picturebox.Dock = DockStyle.Fill&#xD;&#xA;&#xD;&#xA;timer = New Timer()&#xD;&#xA;'Will activate in 3 seconds&#xD;&#xA;timer.Interval = 3000 &#xD;&#xA;AddHandler timer.Tick, Sub(sender As Object, e As EventArgs) frm.Close&#xD;&#xA;timer.Start()&#xD;&#xA;&#xD;&#xA;frm = New Form()&#xD;&#xA;frm.ClientSize = New System.Drawing.Size(picturebox.Image.Width, picturebox.Image.Height)&#xD;&#xA;frm.TopMost = True&#xD;&#xA;frm.Text = Name&#xD;&#xA;frm.Controls.Add(picturebox)&#xD;&#xA;frm.ShowDialog()" DisplayName="Showing Box" sap:VirtualizedContainerService.HintSize="658,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
                                       <ui:InvokeCode.Arguments>
                                         <InArgument x:TypeArguments="sd1:Image" x:Key="Image">[LoadedImage]</InArgument>
                                         <InArgument x:TypeArguments="swf:PictureBox" x:Key="picturebox" />
                                         <InArgument x:TypeArguments="swf:Form" x:Key="frm">[frm]</InArgument>
                                         <InArgument x:TypeArguments="x:String" x:Key="Name">[JsonDataTable.Rows(Index).Item("Title").ToString]</InArgument>
+                                        <InArgument x:TypeArguments="swf:Timer" x:Key="timer" />
                                       </ui:InvokeCode.Arguments>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -912,274 +914,248 @@
                                           <av:Point x:Key="ShapeLocation">0,82.5</av:Point>
                                           <av:Size x:Key="ShapeSize">60,75</av:Size>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          <av:PointCollection x:Key="ConnectorLocation">60,120 90,120 90,110 200,110</av:PointCollection>
+                                          <av:PointCollection x:Key="ConnectorLocation">60,120 250,120</av:PointCollection>
                                           <x:Double x:Key="Width">644</x:Double>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <Flowchart.StartNode>
-                                        <x:Reference>__ReferenceID8</x:Reference>
+                                        <x:Reference>__ReferenceID17</x:Reference>
                                       </Flowchart.StartNode>
-                                      <FlowStep x:Name="__ReferenceID8">
+                                      <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID8" DisplayName="Flow Switch" Expression="[result]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_2">
+                                        <FlowSwitch.Default>
+                                          <FlowStep x:Name="__ReferenceID17">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <av:Point x:Key="ShapeLocation">250,94.5</av:Point>
+                                                <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                <av:PointCollection x:Key="ConnectorLocation">450,120 480,120 480,76.5 512.5,76.5 512.5,106.5</av:PointCollection>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <p:PythonScope DisplayName="Python Scope" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="PythonScope_7" Path="C:\Program Files (x86)\Python36-32">
+                                              <p:PythonScope.Body>
+                                                <ActivityAction x:TypeArguments="x:Object">
+                                                  <ActivityAction.Argument>
+                                                    <DelegateInArgument x:TypeArguments="x:Object" Name="PythonEngineSessionProperty" />
+                                                  </ActivityAction.Argument>
+                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,569" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                                    <Sequence.Variables>
+                                                      <Variable x:TypeArguments="p:PythonObject" Name="pyload" />
+                                                      <Variable x:TypeArguments="p:PythonObject" Name="pyVoke" />
+                                                      <Variable x:TypeArguments="x:String" Name="pyvar" />
+                                                    </Sequence.Variables>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <p:LoadScript Code="{x:Null}" DisplayName="Load Python Script" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="LoadScript_7" Result="[pyload]" ScriptFile="asset\python\Speech-To-Text.py" />
+                                                    <u:PlaySound DisplayName="Play sound" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="PlaySound_19" filepath="asset\wav\beep-07.wav" />
+                                                    <p:InvokeMethod Parameters="{x:Null}" DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="InvokeMethod_7" Instance="[pyload]" Name="SpeechToText" Result="[pyVoke]" />
+                                                    <p:GetObject x:TypeArguments="x:String" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="GetObject`1_7" PythonObject="[pyVoke]" Result="[pyvar]" />
+                                                    <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_36">
+                                                      <Assign.To>
+                                                        <OutArgument x:TypeArguments="x:String">[result]</OutArgument>
+                                                      </Assign.To>
+                                                      <Assign.Value>
+                                                        <InArgument x:TypeArguments="x:String">[pyvar.ToLower]</InArgument>
+                                                      </Assign.Value>
+                                                    </Assign>
+                                                    <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_37">
+                                                      <Assign.To>
+                                                        <OutArgument x:TypeArguments="x:String">[result]</OutArgument>
+                                                      </Assign.To>
+                                                      <Assign.Value>
+                                                        <InArgument x:TypeArguments="x:String">[result.Substring(0, 4)]</InArgument>
+                                                      </Assign.Value>
+                                                    </Assign>
+                                                  </Sequence>
+                                                </ActivityAction>
+                                              </p:PythonScope.Body>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </p:PythonScope>
+                                            <FlowStep.Next>
+                                              <x:Reference>__ReferenceID8</x:Reference>
+                                            </FlowStep.Next>
+                                          </FlowStep>
+                                        </FlowSwitch.Default>
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <av:Point x:Key="ShapeLocation">200,84.5</av:Point>
-                                            <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                            <av:PointCollection x:Key="ConnectorLocation">400,110 430,110 430,128.25 495,128.25</av:PointCollection>
+                                            <av:Point x:Key="ShapeLocation">495,106.5</av:Point>
+                                            <av:Size x:Key="ShapeSize">70,87</av:Size>
+                                            <av:PointCollection x:Key="Default">495,171.75 350,171.75 350,145.5</av:PointCollection>
+                                            <av:PointCollection x:Key="nextConnector">495,171.75 467,171.75 467,222.391761368377 228,222.391761368377 228,166.391761368377 100,166.391761368377 100,199</av:PointCollection>
+                                            <av:PointCollection x:Key="backConnector">495,171.75 466,171.75 466,257.391761368377 228,257.391761368377 228,358 100,358 100,459</av:PointCollection>
+                                            <av:PointCollection x:Key="closeConnector">530,193.5 530,459</av:PointCollection>
+                                            <av:PointCollection x:Key="playConnector">495,171.75 467,171.75 467,303.391761368377 310,303.391761368377 310,459</av:PointCollection>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <p:PythonScope DisplayName="Python Response" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="PythonScope_7" Path="C:\Program Files (x86)\Python36-32">
-                                          <p:PythonScope.Body>
-                                            <ActivityAction x:TypeArguments="x:Object">
-                                              <ActivityAction.Argument>
-                                                <DelegateInArgument x:TypeArguments="x:Object" Name="PythonEngineSessionProperty" />
-                                              </ActivityAction.Argument>
-                                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,569" sap2010:WorkflowViewState.IdRef="Sequence_17">
-                                                <Sequence.Variables>
-                                                  <Variable x:TypeArguments="p:PythonObject" Name="pyload" />
-                                                  <Variable x:TypeArguments="p:PythonObject" Name="pyResult" />
-                                                  <Variable x:TypeArguments="x:String" Name="pyResponse" />
-                                                </Sequence.Variables>
+                                        <FlowStep x:Key="next" x:Name="__ReferenceID9">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <av:Point x:Key="ShapeLocation">0,199</av:Point>
+                                              <av:Size x:Key="ShapeSize">200,22</av:Size>
+                                              <av:PointCollection x:Key="ConnectorLocation">100,221 100,254.5</av:PointCollection>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <u:PlaySound DisplayName="Play beep" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="PlaySound_15" filepath="asset\wav\beep-07.wav" />
+                                          <FlowStep.Next>
+                                            <FlowStep x:Name="__ReferenceID12">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <av:Point x:Key="ShapeLocation">0,254.5</av:Point>
+                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Sequence DisplayName="next" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_18">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <p:LoadScript Code="{x:Null}" DisplayName="Load Python Script" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="LoadScript_7" Result="[pyload]" ScriptFile="asset\python\Speech-To-Text.py" />
-                                                <u:PlaySound DisplayName="Play beep" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="PlaySound_14" filepath="asset\wav\beep-07.wav" />
-                                                <p:InvokeMethod Parameters="{x:Null}" DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="InvokeMethod_7" Instance="[pyload]" Name="SpeechToText" Result="[pyResult]" />
-                                                <p:GetObject x:TypeArguments="x:String" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="GetObject`1_8" PythonObject="[pyResult]" Result="[pyResponse]" />
-                                                <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+                                                <If Condition="[Index &lt;= maximum]" sap:VirtualizedContainerService.HintSize="464,332" sap2010:WorkflowViewState.IdRef="If_4">
+                                                  <If.Then>
+                                                    <Sequence sap:VirtualizedContainerService.HintSize="264,184" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_24">
+                                                        <Assign.To>
+                                                          <OutArgument x:TypeArguments="x:Int32">[Index]</OutArgument>
+                                                        </Assign.To>
+                                                        <Assign.Value>
+                                                          <InArgument x:TypeArguments="x:Int32">[Index + 1]</InArgument>
+                                                        </Assign.Value>
+                                                      </Assign>
+                                                    </Sequence>
+                                                  </If.Then>
+                                                </If>
+                                              </Sequence>
+                                            </FlowStep>
+                                          </FlowStep.Next>
+                                        </FlowStep>
+                                        <FlowStep x:Key="back" x:Name="__ReferenceID10">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <av:Point x:Key="ShapeLocation">0,459</av:Point>
+                                              <av:Size x:Key="ShapeSize">200,22</av:Size>
+                                              <av:PointCollection x:Key="ConnectorLocation">100,481 100,531</av:PointCollection>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <u:PlaySound DisplayName="Play beep" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="PlaySound_16" filepath="asset\wav\beep-07.wav" />
+                                          <FlowStep.Next>
+                                            <FlowStep x:Name="__ReferenceID16">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <av:Point x:Key="ShapeLocation">0,531</av:Point>
+                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Sequence DisplayName="back" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <If Condition="[Index &gt; 0]" sap:VirtualizedContainerService.HintSize="464,332" sap2010:WorkflowViewState.IdRef="If_5">
+                                                  <If.Then>
+                                                    <Sequence sap:VirtualizedContainerService.HintSize="264,184" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_25">
+                                                        <Assign.To>
+                                                          <OutArgument x:TypeArguments="x:Int32">[Index]</OutArgument>
+                                                        </Assign.To>
+                                                        <Assign.Value>
+                                                          <InArgument x:TypeArguments="x:Int32">[Index - 1]</InArgument>
+                                                        </Assign.Value>
+                                                      </Assign>
+                                                    </Sequence>
+                                                  </If.Then>
+                                                </If>
+                                              </Sequence>
+                                            </FlowStep>
+                                          </FlowStep.Next>
+                                        </FlowStep>
+                                        <FlowStep x:Key="play" x:Name="__ReferenceID15">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <av:Point x:Key="ShapeLocation">210,459</av:Point>
+                                              <av:Size x:Key="ShapeSize">200,22</av:Size>
+                                              <av:PointCollection x:Key="ConnectorLocation">310,481 310,534.5</av:PointCollection>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <u:PlaySound DisplayName="Play beep" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="PlaySound_18" filepath="asset\wav\beep-07.wav" />
+                                          <FlowStep.Next>
+                                            <FlowStep x:Name="__ReferenceID14">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <av:Point x:Key="ShapeLocation">210,534.5</av:Point>
+                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Sequence DisplayName="play" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_26">
                                                   <Assign.To>
-                                                    <OutArgument x:TypeArguments="x:String">[result]</OutArgument>
+                                                    <OutArgument x:TypeArguments="x:String">[playOrClose]</OutArgument>
                                                   </Assign.To>
                                                   <Assign.Value>
-                                                    <InArgument x:TypeArguments="x:String">[pyResponse.ToString()]</InArgument>
-                                                  </Assign.Value>
-                                                </Assign>
-                                                <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_18">
-                                                  <Assign.To>
-                                                    <OutArgument x:TypeArguments="x:String">[result]</OutArgument>
-                                                  </Assign.To>
-                                                  <Assign.Value>
-                                                    <InArgument x:TypeArguments="x:String">[result.ToLower]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String">play</InArgument>
                                                   </Assign.Value>
                                                 </Assign>
                                               </Sequence>
-                                            </ActivityAction>
-                                          </p:PythonScope.Body>
+                                            </FlowStep>
+                                          </FlowStep.Next>
+                                        </FlowStep>
+                                        <FlowStep x:Key="close" x:Name="__ReferenceID11">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              <av:Point x:Key="ShapeLocation">430,459</av:Point>
+                                              <av:Size x:Key="ShapeSize">200,22</av:Size>
+                                              <av:PointCollection x:Key="ConnectorLocation">530,481 530,534.5</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                        </p:PythonScope>
-                                        <FlowStep.Next>
-                                          <FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID8}" x:Name="__ReferenceID9" DisplayName="Flow Switch" Expression="[result]" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_2">
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <av:Point x:Key="ShapeLocation">495,106.5</av:Point>
-                                                <av:Size x:Key="ShapeSize">70,87</av:Size>
-                                                <av:PointCollection x:Key="Default">495,171.75 300,171.75 300,135.5</av:PointCollection>
-                                                <av:PointCollection x:Key="nextConnector">495,171.75 467,171.75 467,222.391761368377 228,222.391761368377 228,166.391761368377 100,166.391761368377 100,199</av:PointCollection>
-                                                <av:PointCollection x:Key="backConnector">495,171.75 466,171.75 466,257.391761368377 228,257.391761368377 228,358 100,358 100,459</av:PointCollection>
-                                                <av:PointCollection x:Key="closeConnector">530,193.5 530,459</av:PointCollection>
-                                                <av:PointCollection x:Key="playConnector">495,171.75 467,171.75 467,303.391761368377 310,303.391761368377 310,459</av:PointCollection>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                            <FlowStep x:Key="next" x:Name="__ReferenceID10">
+                                          <u:PlaySound DisplayName="Play beep" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="PlaySound_17" filepath="asset\wav\beep-07.wav" />
+                                          <FlowStep.Next>
+                                            <FlowStep x:Name="__ReferenceID13">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <av:Point x:Key="ShapeLocation">0,199</av:Point>
-                                                  <av:Size x:Key="ShapeSize">200,22</av:Size>
-                                                  <av:PointCollection x:Key="ConnectorLocation">100,221 100,254.5</av:PointCollection>
+                                                  <av:Point x:Key="ShapeLocation">430,534.5</av:Point>
+                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <u:PlaySound DisplayName="Play beep" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="PlaySound_15" filepath="asset\wav\beep-07.wav" />
-                                              <FlowStep.Next>
-                                                <FlowStep x:Name="__ReferenceID13">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <av:Point x:Key="ShapeLocation">0,254.5</av:Point>
-                                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <Sequence DisplayName="next" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_18">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                    <If Condition="[Index &lt;= maximum]" sap:VirtualizedContainerService.HintSize="464,536" sap2010:WorkflowViewState.IdRef="If_4">
-                                                      <If.Then>
-                                                        <Sequence sap:VirtualizedContainerService.HintSize="336,388" sap2010:WorkflowViewState.IdRef="Sequence_24">
-                                                          <sap:WorkflowViewStateService.ViewState>
-                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                            </scg:Dictionary>
-                                                          </sap:WorkflowViewStateService.ViewState>
-                                                          <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_24">
-                                                            <Assign.To>
-                                                              <OutArgument x:TypeArguments="x:Int32">[Index]</OutArgument>
-                                                            </Assign.To>
-                                                            <Assign.Value>
-                                                              <InArgument x:TypeArguments="x:Int32">[Index + 1]</InArgument>
-                                                            </Assign.Value>
-                                                          </Assign>
-                                                          <ui:InvokeCode ContinueOnError="{x:Null}" Code="frm.Close()" DisplayName="Showing Box" sap:VirtualizedContainerService.HintSize="314,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
-                                                            <ui:InvokeCode.Arguments>
-                                                              <InArgument x:TypeArguments="sd1:Image" x:Key="Image">[LoadedImage]</InArgument>
-                                                              <InArgument x:TypeArguments="swf:PictureBox" x:Key="picturebox" />
-                                                              <InArgument x:TypeArguments="swf:Form" x:Key="frm">[frm]</InArgument>
-                                                              <InArgument x:TypeArguments="x:String" x:Key="Name">[JsonDataTable.Rows(Index).Item("Title").ToString]</InArgument>
-                                                            </ui:InvokeCode.Arguments>
-                                                            <sap:WorkflowViewStateService.ViewState>
-                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                              </scg:Dictionary>
-                                                            </sap:WorkflowViewStateService.ViewState>
-                                                          </ui:InvokeCode>
-                                                        </Sequence>
-                                                      </If.Then>
-                                                    </If>
-                                                  </Sequence>
-                                                </FlowStep>
-                                              </FlowStep.Next>
+                                              <Sequence DisplayName="close" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_21">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="x:String">[playOrClose]</OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="x:String">play</InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                              </Sequence>
                                             </FlowStep>
-                                            <FlowStep x:Key="back" x:Name="__ReferenceID11">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <av:Point x:Key="ShapeLocation">0,459</av:Point>
-                                                  <av:Size x:Key="ShapeSize">200,22</av:Size>
-                                                  <av:PointCollection x:Key="ConnectorLocation">100,481 100,531</av:PointCollection>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <u:PlaySound DisplayName="Play beep" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="PlaySound_16" filepath="asset\wav\beep-07.wav" />
-                                              <FlowStep.Next>
-                                                <FlowStep x:Name="__ReferenceID17">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <av:Point x:Key="ShapeLocation">0,531</av:Point>
-                                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <Sequence DisplayName="back" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_26">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                    <If Condition="[Index &gt; 0]" sap:VirtualizedContainerService.HintSize="464,536" sap2010:WorkflowViewState.IdRef="If_5">
-                                                      <If.Then>
-                                                        <Sequence sap:VirtualizedContainerService.HintSize="336,388" sap2010:WorkflowViewState.IdRef="Sequence_25">
-                                                          <sap:WorkflowViewStateService.ViewState>
-                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                            </scg:Dictionary>
-                                                          </sap:WorkflowViewStateService.ViewState>
-                                                          <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_25">
-                                                            <Assign.To>
-                                                              <OutArgument x:TypeArguments="x:Int32">[Index]</OutArgument>
-                                                            </Assign.To>
-                                                            <Assign.Value>
-                                                              <InArgument x:TypeArguments="x:Int32">[Index - 1]</InArgument>
-                                                            </Assign.Value>
-                                                          </Assign>
-                                                          <ui:InvokeCode ContinueOnError="{x:Null}" Code="frm.Close()" DisplayName="Showing Box" sap:VirtualizedContainerService.HintSize="314,164" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
-                                                            <ui:InvokeCode.Arguments>
-                                                              <InArgument x:TypeArguments="sd1:Image" x:Key="Image">[LoadedImage]</InArgument>
-                                                              <InArgument x:TypeArguments="swf:PictureBox" x:Key="picturebox" />
-                                                              <InArgument x:TypeArguments="swf:Form" x:Key="frm">[frm]</InArgument>
-                                                              <InArgument x:TypeArguments="x:String" x:Key="Name">[JsonDataTable.Rows(Index).Item("Title").ToString]</InArgument>
-                                                            </ui:InvokeCode.Arguments>
-                                                            <sap:WorkflowViewStateService.ViewState>
-                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                              </scg:Dictionary>
-                                                            </sap:WorkflowViewStateService.ViewState>
-                                                          </ui:InvokeCode>
-                                                        </Sequence>
-                                                      </If.Then>
-                                                    </If>
-                                                  </Sequence>
-                                                </FlowStep>
-                                              </FlowStep.Next>
-                                            </FlowStep>
-                                            <FlowStep x:Key="play" x:Name="__ReferenceID16">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <av:Point x:Key="ShapeLocation">210,459</av:Point>
-                                                  <av:Size x:Key="ShapeSize">200,22</av:Size>
-                                                  <av:PointCollection x:Key="ConnectorLocation">310,481 310,534.5</av:PointCollection>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <u:PlaySound DisplayName="Play beep" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="PlaySound_18" filepath="asset\wav\beep-07.wav" />
-                                              <FlowStep.Next>
-                                                <FlowStep x:Name="__ReferenceID15">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <av:Point x:Key="ShapeLocation">210,534.5</av:Point>
-                                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <Sequence DisplayName="play" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_21">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                    <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_26">
-                                                      <Assign.To>
-                                                        <OutArgument x:TypeArguments="x:String">[playOrClose]</OutArgument>
-                                                      </Assign.To>
-                                                      <Assign.Value>
-                                                        <InArgument x:TypeArguments="x:String">play</InArgument>
-                                                      </Assign.Value>
-                                                    </Assign>
-                                                  </Sequence>
-                                                </FlowStep>
-                                              </FlowStep.Next>
-                                            </FlowStep>
-                                            <FlowStep x:Key="close" x:Name="__ReferenceID12">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <av:Point x:Key="ShapeLocation">430,459</av:Point>
-                                                  <av:Size x:Key="ShapeSize">200,22</av:Size>
-                                                  <av:PointCollection x:Key="ConnectorLocation">530,481 530,534.5</av:PointCollection>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <u:PlaySound DisplayName="Play beep" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="PlaySound_17" filepath="asset\wav\beep-07.wav" />
-                                              <FlowStep.Next>
-                                                <FlowStep x:Name="__ReferenceID14">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <av:Point x:Key="ShapeLocation">430,534.5</av:Point>
-                                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <Sequence DisplayName="close" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_20">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                    <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_21">
-                                                      <Assign.To>
-                                                        <OutArgument x:TypeArguments="x:String">[playOrClose]</OutArgument>
-                                                      </Assign.To>
-                                                      <Assign.Value>
-                                                        <InArgument x:TypeArguments="x:String">play</InArgument>
-                                                      </Assign.Value>
-                                                    </Assign>
-                                                  </Sequence>
-                                                </FlowStep>
-                                              </FlowStep.Next>
-                                            </FlowStep>
-                                          </FlowSwitch>
-                                        </FlowStep.Next>
-                                      </FlowStep>
+                                          </FlowStep.Next>
+                                        </FlowStep>
+                                      </FlowSwitch>
                                       <x:Reference>__ReferenceID9</x:Reference>
                                       <x:Reference>__ReferenceID10</x:Reference>
                                       <x:Reference>__ReferenceID11</x:Reference>

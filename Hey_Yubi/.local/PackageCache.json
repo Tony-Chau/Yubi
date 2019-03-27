@@ -170,6 +170,20 @@
         "Version": "1.0.1"
       },
       "Assemblies": []
+    },
+    {
+      "Package": {
+        "Id": "python",
+        "Version": "3.7.3"
+      },
+      "Assemblies": []
+    },
+    {
+      "Package": {
+        "Id": "python-embed",
+        "Version": "3.6.1.1"
+      },
+      "Assemblies": []
     }
   ],
   "Conflicts": [],
@@ -227,6 +241,16 @@
     "NuGet.Modules.ReflectionExtensions": {
       "Id": "NuGet.Modules.ReflectionExtensions",
       "Version": "1.0.1",
+      "Dependencies": []
+    },
+    "python": {
+      "Id": "python",
+      "Version": "3.7.3",
+      "Dependencies": []
+    },
+    "python-embed": {
+      "Id": "python-embed",
+      "Version": "3.6.1.1",
       "Dependencies": []
     },
     "RestSharp": {

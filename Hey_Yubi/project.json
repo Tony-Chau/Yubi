@@ -12,7 +12,9 @@
     "UiPath.System.Activities": "[19.3.0]",
     "UiPath": "[10.0.7004.31775]",
     "JObject": "[1.0.0]",
-    "NuGet.Modules.JObjectExtensions": "[1.0.1]"
+    "NuGet.Modules.JObjectExtensions": "[1.0.1]",
+    "python": "[3.7.3]",
+    "python-embed": "[3.6.1.1]"
   },
   "schemaVersion": "3.2",
   "studioVersion": "19.2.0.0",
