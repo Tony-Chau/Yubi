@@ -12,6 +12,3 @@ else the 64 bit
 	PyAudio-0.2.11-cp36-cp36m-win_amd64.whl
 OR
 	pip install PyAudio
-pip install --upgrade google-api-python-client
-pip install --upgrade google-auth google-auth-oauthlib google-auth-httplib2
-pip install --upgrade oauth2client
