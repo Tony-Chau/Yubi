@@ -53,6 +53,22 @@ namespace Yubi_V2
             Fixedupword.Set(context, word);
         }
     }
+    public class FamiliarWordFixMethod_pt2 : CodeActivity
+    {
+        [Category("Input")]
+        public InArgument<string> Word { get; set; }
+
+        [Category("Output")]
+        public OutArgument<string> Fixedupword { get; set; }
+
+        protected override void Execute(CodeActivityContext context)
+        {
+            string word = Word.Get(context);
+            
+            Fixedupword.Set(context, word);
+        }
+    }
+
     public class RetrieveAPIKey : CodeActivity
     {
         [Category("Output")]
