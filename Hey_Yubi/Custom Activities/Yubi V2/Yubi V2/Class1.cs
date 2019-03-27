@@ -64,11 +64,31 @@ namespace Yubi_V2
         protected override void Execute(CodeActivityContext context)
         {
             string word = Word.Get(context);
-            
+            //Next
+            if (word == "checks" || word == "nex" || word == "dex"
+                || word == "ex" || word == "fecks" || word == "decks"
+                || word == "necks" || word == "vex" || word == "mex"){
+                Fixedupword.Set(context, "next");
+                return;
+            }
+            //back
+            if (word == "ack" || word == "bak" || word == "braque"
+                || word == "jack" || word == "hack" || word == "bakke"
+                || word == "backe" || word == "brack" || word == "akc"){
+                Fixedupword.Set(context, "back");
+                return;
+            }
+            //play
+            if (word == "bay" || word == "clay" || word == "fay" 
+                || word == "day" || word == "hay"|| word == "lay"
+                || word == "neigh" || word == "pray" || word == "prey"){
+                Fixedupword.Set(context, "play");
+                return;
+            }
+            //exit does not need one
             Fixedupword.Set(context, word);
         }
     }
-
     public class RetrieveAPIKey : CodeActivity
     {
         [Category("Output")]
@@ -79,7 +99,7 @@ namespace Yubi_V2
             //sql code
             string key = "";
             string connSTR = "server=team52truii.heliohost.org;user=truii52_manager;database=truii52_DB;port=3306;password=Midori";
-            
+
             try
             {
                 MySqlConnection conn = new MySqlConnection(connSTR);

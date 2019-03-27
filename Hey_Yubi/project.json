@@ -7,14 +7,14 @@
     "YubiPackage": "[1.0.5]",
     "UiPath.CefSharpBundle": "[1.0.0]",
     "UiPath.WebAPI.Activities": "[1.4.0]",
-    "YubiExtension": "[1.1.3]",
     "UiPath.UIAutomation.Activities": "[19.3.0]",
     "UiPath.System.Activities": "[19.3.0]",
     "UiPath": "[10.0.7004.31775]",
     "JObject": "[1.0.0]",
     "NuGet.Modules.JObjectExtensions": "[1.0.1]",
     "python": "[3.7.3]",
-    "python-embed": "[3.6.1.1]"
+    "python-embed": "[3.6.1.1]",
+    "YubiExtension": "[1.1.5]"
   },
   "schemaVersion": "3.2",
   "studioVersion": "19.2.0.0",
