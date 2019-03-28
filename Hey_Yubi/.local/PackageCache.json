@@ -77,7 +77,7 @@
         "C:\\Users\\tony_\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.DataGrid.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.Toolkit.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\humanizer.core/2.4.2\\lib/netstandard2.0/Humanizer.dll",
-        "C:\\Users\\tony_\\.nuget\\packages\\uipath/10.0.7004.31775\\lib/UiPath.Interop.dll",
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath/10.0.7020.22745\\lib/UiPath.Interop.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\uipath.uiautomation.activities/19.3.0\\lib/net461/ActiproSoftware.Docking.Wpf.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\uipath.uiautomation.activities/19.3.0\\lib/net461/ActiproSoftware.Editors.Wpf.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\uipath.uiautomation.activities/19.3.0\\lib/net461/ActiproSoftware.Ribbon.Wpf.dll",
@@ -129,43 +129,6 @@
     },
     {
       "Package": {
-        "Id": "UiPath",
-        "Version": "10.0.7004.31775"
-      },
-      "Assemblies": [
-        "C:\\Users\\tony_\\.nuget\\packages\\uipath/10.0.7004.31775\\lib/UiPath.Interop.dll"
-      ]
-    },
-    {
-      "Package": {
-        "Id": "JObject",
-        "Version": "1.0.0"
-      },
-      "Assemblies": []
-    },
-    {
-      "Package": {
-        "Id": "NuGet.Modules.JObjectExtensions",
-        "Version": "1.0.1"
-      },
-      "Assemblies": []
-    },
-    {
-      "Package": {
-        "Id": "python",
-        "Version": "3.7.3"
-      },
-      "Assemblies": []
-    },
-    {
-      "Package": {
-        "Id": "python-embed",
-        "Version": "3.6.1.1"
-      },
-      "Assemblies": []
-    },
-    {
-      "Package": {
         "Id": "YubiExtension",
         "Version": "1.1.5"
       },
@@ -183,6 +146,15 @@
         "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.1.5\\lib/OpenSSL.PrivateKeyDecoder.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.1.5\\lib/OpenSSL.X509Certificate2.Provider.dll",
         "C:\\Users\\tony_\\.nuget\\packages\\yubiextension/1.1.5\\lib/Yubi V2.dll"
+      ]
+    },
+    {
+      "Package": {
+        "Id": "UiPath",
+        "Version": "10.0.7020.22745"
+      },
+      "Assemblies": [
+        "C:\\Users\\tony_\\.nuget\\packages\\uipath/10.0.7020.22745\\lib/UiPath.Interop.dll"
       ]
     }
   ],
@@ -208,11 +180,6 @@
       "Version": "2.4.2",
       "Dependencies": []
     },
-    "JObject": {
-      "Id": "JObject",
-      "Version": "1.0.0",
-      "Dependencies": []
-    },
     "Microsoft.Rest.ClientRuntime": {
       "Id": "Microsoft.Rest.ClientRuntime",
       "Version": "2.3.10",
@@ -228,31 +195,6 @@
       "Version": "11.0.2",
       "Dependencies": []
     },
-    "NuGet.Modules.JObjectExtensions": {
-      "Id": "NuGet.Modules.JObjectExtensions",
-      "Version": "1.0.1",
-      "Dependencies": [
-        {
-          "Item1": "NuGet.Modules.ReflectionExtensions",
-          "Item2": "[1.0.1, )"
-        }
-      ]
-    },
-    "NuGet.Modules.ReflectionExtensions": {
-      "Id": "NuGet.Modules.ReflectionExtensions",
-      "Version": "1.0.1",
-      "Dependencies": []
-    },
-    "python": {
-      "Id": "python",
-      "Version": "3.7.3",
-      "Dependencies": []
-    },
-    "python-embed": {
-      "Id": "python-embed",
-      "Version": "3.6.1.1",
-      "Dependencies": []
-    },
     "RestSharp": {
       "Id": "RestSharp",
       "Version": "106.3.1",
@@ -260,7 +202,7 @@
     },
     "UiPath": {
       "Id": "UiPath",
-      "Version": "10.0.7004.31775",
+      "Version": "10.0.7020.22745",
       "Dependencies": []
     },
     "UiPath.CefSharpBundle": {
