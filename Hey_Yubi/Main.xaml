@@ -4,6 +4,7 @@
     <x:Property Name="jsontest" Type="InArgument(x:String)" />
     <x:Property Name="dr" Type="InArgument(sd:DataRow)" />
     <x:Property Name="maximum" Type="InArgument(x:Int32)" />
+    <x:Property Name="flash" Type="InArgument(x:String)" />
   </x:Members>
   <this:Main.dr>
     <InArgument x:TypeArguments="sd:DataRow" />
@@ -880,7 +881,7 @@
                                       <av:PointCollection x:Key="ConnectorLocation">710,535.5 710,566.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Flowchart DisplayName="Showing boxes" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_4">
+                                  <Flowchart DisplayName="Showing boxes" sap:VirtualizedContainerService.HintSize="725,636" sap2010:WorkflowViewState.IdRef="Flowchart_4">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -957,15 +958,15 @@
                                                   </ui:FilterDataTable.SelectColumns>
                                                 </ui:FilterDataTable>
                                                 <y:ImageUrlToImage DisplayName="Image url to image" sap:VirtualizedContainerService.HintSize="724,22" sap2010:WorkflowViewState.IdRef="ImageUrlToImage_1" ImageResult="[LoadedImage]" ImageUrl="[RowDataTable.Rows(0).item(&quot;ImageUrl&quot;).ToString]" />
-                                                <ui:InvokeCode ContinueOnError="{x:Null}" Code="picturebox = New PictureBox()&#xA;picturebox.Image = Image&#xA;picturebox.Dock = DockStyle.Fill&#xA;&#xA;timer = New Timer()&#xA;'Will activate in 3 seconds&#xA;timer.Interval = 3000 &#xA;AddHandler timer.Tick, Sub(sender As Object, e As EventArgs) frm.Close&#xA;timer.Start()&#xA;&#xA;frm = New Form()&#xA;frm.ClientSize = New System.Drawing.Size(picturebox.Image.Width, picturebox.Image.Height)&#xA;frm.TopMost = True&#xA;frm.Text = (Index + 1).ToString + &quot;/&quot; + Maximum.ToString + &quot; - &quot; + Name&#xA;frm.Controls.Add(picturebox)&#xA;frm.ShowDialog()" DisplayName="Showing Box" sap:VirtualizedContainerService.HintSize="724,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+                                                <ui:InvokeCode ContinueOnError="{x:Null}" Code="picturebox = New PictureBox()&#xD;&#xA;picturebox.Image = Image&#xD;&#xA;picturebox.Dock = DockStyle.Fill&#xD;&#xA;&#xD;&#xA;timer = New Timer()&#xD;&#xA;'Will activate in 3 seconds&#xD;&#xA;timer.Interval = 3000 &#xD;&#xA;AddHandler timer.Tick, Sub(sender As Object, e As EventArgs) frm.Close&#xD;&#xA;timer.Start()&#xD;&#xA;&#xD;&#xA;frm = New Form()&#xD;&#xA;frm.ClientSize = New System.Drawing.Size(picturebox.Image.Width, picturebox.Image.Height)&#xD;&#xA;frm.TopMost = True&#xD;&#xA;frm.Text = (Index + 1).ToString + &quot;/&quot; + Maximum.ToString + &quot; - &quot; + Name&#xD;&#xA;frm.Controls.Add(picturebox)&#xD;&#xA;frm.ShowDialog()" DisplayName="Showing Box" sap:VirtualizedContainerService.HintSize="724,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
                                                   <ui:InvokeCode.Arguments>
                                                     <InArgument x:TypeArguments="sd1:Image" x:Key="Image">[LoadedImage]</InArgument>
                                                     <InArgument x:TypeArguments="swf:PictureBox" x:Key="picturebox" />
-                                                    <InArgument x:TypeArguments="swf:Form" x:Key="frm">[frm]</InArgument>
                                                     <InArgument x:TypeArguments="x:String" x:Key="Name">[RowDataTable.Rows(0).Item("Title").ToString]</InArgument>
                                                     <InArgument x:TypeArguments="swf:Timer" x:Key="timer" />
                                                     <InArgument x:TypeArguments="x:Int32" x:Key="Index">[Index]</InArgument>
                                                     <InArgument x:TypeArguments="x:Int32" x:Key="Maximum">[maximum]</InArgument>
+                                                    <InArgument x:TypeArguments="swf:Form" x:Key="frm" />
                                                   </ui:InvokeCode.Arguments>
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1422,7 +1423,7 @@
                                                   <av:Size x:Key="ShapeSize">200,51</av:Size>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Flowchart DisplayName="Play" sap:VirtualizedContainerService.HintSize="614,636" sap2010:WorkflowViewState.IdRef="Flowchart_6">
+                                              <Flowchart DisplayName="Play" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_6">
                                                 <Flowchart.Variables>
                                                   <Variable x:TypeArguments="x:String" Name="youtubelink" />
                                                 </Flowchart.Variables>
