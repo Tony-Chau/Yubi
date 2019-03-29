@@ -9,8 +9,8 @@
     "UiPath.WebAPI.Activities": "[1.4.0]",
     "UiPath.UIAutomation.Activities": "[19.3.0]",
     "UiPath.System.Activities": "[19.3.0]",
-    "YubiExtension": "[1.1.5]",
-    "UiPath": "[10.0.7020.22745]"
+    "UiPath": "[10.0.7020.22745]",
+    "YubiExtension": "[1.2.0]"
   },
   "schemaVersion": "3.2",
   "studioVersion": "19.2.0.0",

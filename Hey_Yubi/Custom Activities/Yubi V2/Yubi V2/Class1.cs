@@ -13,6 +13,7 @@ using System.IO;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Data;
+using System.Diagnostics;
 
 namespace Yubi_V2
 {
@@ -136,6 +137,19 @@ namespace Yubi_V2
             Image img = Image.FromStream(stream);
             ImageResult.Set(context, img);
 
+        }
+    }
+
+    public class StartBrowser : CodeActivity
+    {
+        [Category("Input")]
+        public InArgument<string> Url { get; set; }
+
+        protected override void Execute(CodeActivityContext context)
+        {
+            string url = Url.Get(context);
+            ProcessStartInfo web = new ProcessStartInfo(url);
+            Process.Start(web);
         }
     }
 }
