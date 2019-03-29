@@ -12,7 +12,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>921,1077</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>921,1117</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -530,9 +530,7 @@
               <Flowchart DisplayName="Youtube Searching" sap:VirtualizedContainerService.HintSize="1019,786" sap2010:WorkflowViewState.IdRef="Flowchart_3">
                 <Flowchart.Variables>
                   <Variable x:TypeArguments="sd:DataTable" Name="JsonDataTable" />
-                  <Variable x:TypeArguments="swf:Form" Name="frm" />
                   <Variable x:TypeArguments="x:String" Name="result" />
-                  <Variable x:TypeArguments="x:Boolean" Name="confirmplay" />
                   <Variable x:TypeArguments="x:Boolean" Default="False" Name="playconfirm" />
                   <Variable x:TypeArguments="x:String" Name="playOrClose" />
                   <Variable x:TypeArguments="x:String" Name="jsonString" />
@@ -790,13 +788,6 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Sequence DisplayName="Managing Json to DT" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                            <Sequence.Variables>
-                              <Variable x:TypeArguments="njl:JArray" Name="JArray" />
-                              <Variable x:TypeArguments="njl:JArray" Name="JsonArray" />
-                              <Variable x:TypeArguments="sd:DataTable" Name="JTable" />
-                              <Variable x:TypeArguments="x:String" Name="ConvToItem" />
-                              <Variable x:TypeArguments="njl:JObject" Name="JsonItems" />
-                            </Sequence.Variables>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -881,7 +872,7 @@
                                       <av:PointCollection x:Key="ConnectorLocation">710,535.5 710,566.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Flowchart DisplayName="Showing boxes" sap:VirtualizedContainerService.HintSize="725,636" sap2010:WorkflowViewState.IdRef="Flowchart_4">
+                                  <Flowchart DisplayName="Showing boxes" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_4">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -929,10 +920,7 @@
                                                   <av:PointCollection x:Key="ConnectorLocation">300,335.5 300,376.5</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Sequence DisplayName="ImageBox &amp; Response" sap:VirtualizedContainerService.HintSize="746,1125" sap2010:WorkflowViewState.IdRef="Sequence_15">
-                                                <Sequence.Variables>
-                                                  <Variable x:TypeArguments="x:String" Name="timer" />
-                                                </Sequence.Variables>
+                                              <Sequence DisplayName="ImageBox &amp; Response" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_15">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -958,7 +946,7 @@
                                                   </ui:FilterDataTable.SelectColumns>
                                                 </ui:FilterDataTable>
                                                 <y:ImageUrlToImage DisplayName="Image url to image" sap:VirtualizedContainerService.HintSize="724,22" sap2010:WorkflowViewState.IdRef="ImageUrlToImage_1" ImageResult="[LoadedImage]" ImageUrl="[RowDataTable.Rows(0).item(&quot;ImageUrl&quot;).ToString]" />
-                                                <ui:InvokeCode ContinueOnError="{x:Null}" Code="picturebox = New PictureBox()&#xD;&#xA;picturebox.Image = Image&#xD;&#xA;picturebox.Dock = DockStyle.Fill&#xD;&#xA;&#xD;&#xA;timer = New Timer()&#xD;&#xA;'Will activate in 3 seconds&#xD;&#xA;timer.Interval = 3000 &#xD;&#xA;AddHandler timer.Tick, Sub(sender As Object, e As EventArgs) frm.Close&#xD;&#xA;timer.Start()&#xD;&#xA;&#xD;&#xA;frm = New Form()&#xD;&#xA;frm.ClientSize = New System.Drawing.Size(picturebox.Image.Width, picturebox.Image.Height)&#xD;&#xA;frm.TopMost = True&#xD;&#xA;frm.Text = (Index + 1).ToString + &quot;/&quot; + Maximum.ToString + &quot; - &quot; + Name&#xD;&#xA;frm.Controls.Add(picturebox)&#xD;&#xA;frm.ShowDialog()" DisplayName="Showing Box" sap:VirtualizedContainerService.HintSize="724,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+                                                <ui:InvokeCode ContinueOnError="{x:Null}" Code="picturebox = New PictureBox()&#xA;picturebox.Image = Image&#xA;picturebox.Dock = DockStyle.Fill&#xA;&#xA;timer = New Timer()&#xA;'Will activate in 3 seconds&#xA;timer.Interval = 3000 &#xA;AddHandler timer.Tick, Sub(sender As Object, e As EventArgs) frm.Close&#xA;timer.Start()&#xA;&#xA;frm = New Form()&#xA;frm.ClientSize = New System.Drawing.Size(picturebox.Image.Width, picturebox.Image.Height)&#xA;frm.TopMost = True&#xA;frm.Text = (Index + 1).ToString + &quot;/&quot; + Maximum.ToString + &quot; - &quot; + Name&#xA;frm.Controls.Add(picturebox)&#xA;frm.ShowDialog()" DisplayName="Showing Box" sap:VirtualizedContainerService.HintSize="724,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
                                                   <ui:InvokeCode.Arguments>
                                                     <InArgument x:TypeArguments="sd1:Image" x:Key="Image">[LoadedImage]</InArgument>
                                                     <InArgument x:TypeArguments="swf:PictureBox" x:Key="picturebox" />
@@ -1423,10 +1411,7 @@
                                                   <av:Size x:Key="ShapeSize">200,51</av:Size>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Flowchart DisplayName="Play" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_6">
-                                                <Flowchart.Variables>
-                                                  <Variable x:TypeArguments="x:String" Name="youtubelink" />
-                                                </Flowchart.Variables>
+                                              <Flowchart DisplayName="Play" sap:VirtualizedContainerService.HintSize="614,636" sap2010:WorkflowViewState.IdRef="Flowchart_6">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1445,31 +1430,28 @@
                                                       <av:Size x:Key="ShapeSize">200,51</av:Size>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <Sequence sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                                  <Sequence sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_33">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_39">
-                                                      <Assign.To>
-                                                        <OutArgument x:TypeArguments="x:String">[youtubelink]</OutArgument>
-                                                      </Assign.To>
-                                                      <Assign.Value>
-                                                        <InArgument x:TypeArguments="x:String">["https://www.youtube.com/embed/" + RowDataTable.Rows(0).Item("vidID").ToString]</InArgument>
-                                                      </Assign.Value>
-                                                      <sap:WorkflowViewStateService.ViewState>
-                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                        </scg:Dictionary>
-                                                      </sap:WorkflowViewStateService.ViewState>
-                                                    </Assign>
-                                                    <ui:InvokeCode Code="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="314,164" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
-                                                      <ui:InvokeCode.Arguments>
-                                                        <InArgument x:TypeArguments="swf:Form" x:Key="frm">[frm]</InArgument>
-                                                        <InArgument x:TypeArguments="x:String" x:Key="link">[youtubelink]</InArgument>
-                                                      </ui:InvokeCode.Arguments>
-                                                    </ui:InvokeCode>
+                                                    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" Hidden="False" sap:VirtualizedContainerService.HintSize="414,198" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="[&quot;https://www.youtube.com/watch?v=&quot; + RowDataTable.Rows(0).Item(&quot;vidID&quot;).ToString]">
+                                                      <ui:OpenBrowser.Body>
+                                                        <ActivityAction x:TypeArguments="x:Object">
+                                                          <ActivityAction.Argument>
+                                                            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                                          </ActivityAction.Argument>
+                                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,99" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                          </Sequence>
+                                                        </ActivityAction>
+                                                      </ui:OpenBrowser.Body>
+                                                    </ui:OpenBrowser>
                                                   </Sequence>
                                                 </FlowStep>
                                               </Flowchart>
@@ -1819,7 +1801,7 @@
                   <OutArgument x:TypeArguments="x:String">[SearchItem]</OutArgument>
                 </Assign.To>
                 <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">Overwatch Cinematics</InArgument>
+                  <InArgument x:TypeArguments="x:String">Overwatch</InArgument>
                 </Assign.Value>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
