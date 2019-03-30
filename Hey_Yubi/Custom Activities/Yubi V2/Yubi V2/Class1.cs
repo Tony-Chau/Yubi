@@ -68,26 +68,31 @@ namespace Yubi_V2
             //Next
             if (word == "checks" || word == "nex" || word == "dex"
                 || word == "ex" || word == "fecks" || word == "decks"
-                || word == "necks" || word == "vex" || word == "mex"){
+                || word == "necks" || word == "vex" || word == "mex" || word == "next"){
                 Fixedupword.Set(context, "next");
                 return;
             }
             //back
             if (word == "ack" || word == "bak" || word == "braque"
                 || word == "jack" || word == "hack" || word == "bakke"
-                || word == "backe" || word == "brack" || word == "akc"){
+                || word == "backe" || word == "brack" || word == "akc" || word == "back"){
                 Fixedupword.Set(context, "back");
                 return;
             }
             //play
             if (word == "bay" || word == "clay" || word == "fay" 
                 || word == "day" || word == "hay"|| word == "lay"
-                || word == "neigh" || word == "pray" || word == "prey"){
+                || word == "neigh" || word == "pray" || word == "prey" || word == "play"){
+                Fixedupword.Set(context, "play");
+                return;
+            }
+            if (word == "exit")
+            {
                 Fixedupword.Set(context, "play");
                 return;
             }
             //exit does not need one
-            Fixedupword.Set(context, word);
+            Fixedupword.Set(context, "word"); //prevents crash
         }
     }
     public class RetrieveAPIKey : CodeActivity

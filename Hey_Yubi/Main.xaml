@@ -872,7 +872,7 @@
                                       <av:PointCollection x:Key="ConnectorLocation">710,535.5 710,566.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Flowchart DisplayName="Showing boxes" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_4">
+                                  <Flowchart DisplayName="Showing boxes" sap:VirtualizedContainerService.HintSize="725,636" sap2010:WorkflowViewState.IdRef="Flowchart_4">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -920,7 +920,7 @@
                                                   <av:PointCollection x:Key="ConnectorLocation">300,335.5 300,376.5</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Sequence DisplayName="ImageBox &amp; Response" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                              <Sequence DisplayName="ImageBox &amp; Response" sap:VirtualizedContainerService.HintSize="746,1125" sap2010:WorkflowViewState.IdRef="Sequence_15">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1089,13 +1089,13 @@
                                                               <av:Size x:Key="ShapeSize">200,51</av:Size>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <Sequence DisplayName="next" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                                          <Sequence DisplayName="next" sap:VirtualizedContainerService.HintSize="553,456" sap2010:WorkflowViewState.IdRef="Sequence_18">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
-                                                            <If Condition="[Index &lt;= maximum]" sap:VirtualizedContainerService.HintSize="464,332" sap2010:WorkflowViewState.IdRef="If_4">
+                                                            <If Condition="[Index &lt;= maximum]" sap:VirtualizedContainerService.HintSize="531,332" sap2010:WorkflowViewState.IdRef="If_4">
                                                               <If.Then>
                                                                 <Sequence sap:VirtualizedContainerService.HintSize="264,184" sap2010:WorkflowViewState.IdRef="Sequence_24">
                                                                   <sap:WorkflowViewStateService.ViewState>
@@ -1113,6 +1113,16 @@
                                                                   </Assign>
                                                                 </Sequence>
                                                               </If.Then>
+                                                              <If.Else>
+                                                                <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_46">
+                                                                  <Assign.To>
+                                                                    <OutArgument x:TypeArguments="x:Int32">[Index]</OutArgument>
+                                                                  </Assign.To>
+                                                                  <Assign.Value>
+                                                                    <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                                                  </Assign.Value>
+                                                                </Assign>
+                                                              </If.Else>
                                                             </If>
                                                           </Sequence>
                                                         </FlowStep>
@@ -1141,7 +1151,7 @@
                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
-                                                            <If Condition="[Index &gt; 0]" sap:VirtualizedContainerService.HintSize="464,332" sap2010:WorkflowViewState.IdRef="If_5">
+                                                            <If Condition="[Index &gt; 0]" sap:VirtualizedContainerService.HintSize="531,332" sap2010:WorkflowViewState.IdRef="If_5">
                                                               <If.Then>
                                                                 <Sequence sap:VirtualizedContainerService.HintSize="264,184" sap2010:WorkflowViewState.IdRef="Sequence_25">
                                                                   <sap:WorkflowViewStateService.ViewState>
@@ -1159,6 +1169,16 @@
                                                                   </Assign>
                                                                 </Sequence>
                                                               </If.Then>
+                                                              <If.Else>
+                                                                <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_47">
+                                                                  <Assign.To>
+                                                                    <OutArgument x:TypeArguments="x:Int32">[Index]</OutArgument>
+                                                                  </Assign.To>
+                                                                  <Assign.Value>
+                                                                    <InArgument x:TypeArguments="x:Int32">[maximum - 1]</InArgument>
+                                                                  </Assign.Value>
+                                                                </Assign>
+                                                              </If.Else>
                                                             </If>
                                                           </Sequence>
                                                         </FlowStep>
@@ -1411,7 +1431,7 @@
                                                   <av:Size x:Key="ShapeSize">200,51</av:Size>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Flowchart DisplayName="Play" sap:VirtualizedContainerService.HintSize="614,636" sap2010:WorkflowViewState.IdRef="Flowchart_6">
+                                              <Flowchart DisplayName="Play" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_6">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1431,18 +1451,19 @@
                                                       <av:PointCollection x:Key="ConnectorLocation">300,250.5 300,310</av:PointCollection>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <Sequence DisplayName="Play" sap:VirtualizedContainerService.HintSize="336,282" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                                  <Sequence DisplayName="Play" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_33">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                     <y:StartBrowser DisplayName="Start browser" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="StartBrowser_1" Url="[&quot;https://www.youtube.com/watch?v=&quot; + RowDataTable.Rows(0).Item(&quot;vidID&quot;).ToString]" />
-                                                    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'chrome.exe'" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,96" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="False" Text="f">
+                                                    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayMS="5000" DisplayName="Type Into" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,96" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="False" SimulateType="False" Text="f">
                                                       <ui:TypeInto.Target>
-                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html omit:app='chrome.exe' title='(2) YouTube' /&gt;" WaitForReady="INTERACTIVE" />
+                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
                                                       </ui:TypeInto.Target>
                                                     </ui:TypeInto>
+                                                    <Delay Duration="[new TimeSpan(0, 0, 5)]" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="Delay_9" />
                                                   </Sequence>
                                                   <FlowStep.Next>
                                                     <FlowStep x:Name="__ReferenceID31">
