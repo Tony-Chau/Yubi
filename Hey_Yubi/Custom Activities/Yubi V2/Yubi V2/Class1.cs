@@ -154,7 +154,7 @@ namespace Yubi_V2
     }
 
     /// <summary>
-    /// Convert Image URl to Image type
+    /// Convert Image URl to Image type 
     /// </summary>
     public class ImageUrlToImage : CodeActivity
     {
