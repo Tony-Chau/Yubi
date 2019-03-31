@@ -18,6 +18,7 @@ using System.Windows.Forms;
 using Microsoft.Win32;
 using System.Diagnostics;
 using System.Net.Http;
+using MySql.Data.MySqlClient;
 
 /// <summary>
 /// The Test file is there to help me what program is needed 
@@ -29,8 +30,28 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            ProcessStartInfo sInfo = new ProcessStartInfo("http://example.com/");
-            Process.Start(sInfo);
+            //sql code
+            string key = "";
+            string connSTR = "server=team52truii.heliohost.org;user=truii52_project;database=truii52_Keys;port=3306;password=Release";
+
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(connSTR);
+                conn.Open();
+                //Name ApiKey ApiSecret
+                string sql = "SELECT * FROM truii52_Keys.Project WHERE Name=\"Youtube\"";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    key = rdr[1].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            Console.WriteLine(key);
 
             Console.ReadKey();
         }

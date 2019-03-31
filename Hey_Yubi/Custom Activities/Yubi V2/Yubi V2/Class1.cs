@@ -17,11 +17,20 @@ using System.Diagnostics;
 
 namespace Yubi_V2
 {
+    /// <summary>
+    /// Fixing up some similar word
+    /// </summary>
     public class FamiliarWordFixMethod : CodeActivity
     {
+        /// <summary>
+        /// The word that is being checked
+        /// </summary>
         [Category("Input")]
         public InArgument<string> Word { get; set; }
 
+        /// <summary>
+        /// The fixed up word
+        /// </summary>
         [Category("Output")]
         public OutArgument<string> Fixedupword {get; set;}
 
@@ -54,11 +63,21 @@ namespace Yubi_V2
             Fixedupword.Set(context, word);
         }
     }
+
+    /// <summary>
+    /// Same as above to fix up some words
+    /// </summary>
     public class FamiliarWordFixMethod_pt2 : CodeActivity
     {
+        /// <summary>
+        /// the word that is being fixed
+        /// </summary>
         [Category("Input")]
         public InArgument<string> Word { get; set; }
 
+        /// <summary>
+        /// The fixed-up word
+        /// </summary>
         [Category("Output")]
         public OutArgument<string> Fixedupword { get; set; }
 
@@ -95,8 +114,15 @@ namespace Yubi_V2
             Fixedupword.Set(context, "word"); //prevents crash
         }
     }
+
+    /// <summary>
+    /// Retrieving the API key using mysql (not relevant, but it is good to learn sql using Uipath
+    /// </summary>
     public class RetrieveAPIKey : CodeActivity
     {
+        /// <summary>
+        /// The Youtube API key
+        /// </summary>
         [Category("Output")]
         public OutArgument<string> ApiKey { get; set; }
 
@@ -104,13 +130,14 @@ namespace Yubi_V2
         {
             //sql code
             string key = "";
-            string connSTR = "server=team52truii.heliohost.org;user=truii52_manager;database=truii52_DB;port=3306;password=Midori";
+            string connSTR = "server=team52truii.heliohost.org;user=truii52_project;database=truii52_Keys;port=3306;password=Release";
 
             try
             {
                 MySqlConnection conn = new MySqlConnection(connSTR);
                 conn.Open();
-                string sql = "SELECT * FROM truii52_DB.ProjectKeys WHERE Name=\"YoutubeAPI\"";
+                //Name ApiKey ApiSecret
+                string sql = "SELECT * FROM truii52_Keys.ProjectTable WHERE Name=\"Youtube\"";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 while (rdr.Read())
@@ -125,11 +152,21 @@ namespace Yubi_V2
             ApiKey.Set(context, key);
         }
     }
+
+    /// <summary>
+    /// Convert Image URl to Image type
+    /// </summary>
     public class ImageUrlToImage : CodeActivity
     {
+        /// <summary>
+        /// Image Url
+        /// </summary>
         [Category("Input")]
         public InArgument<string> ImageUrl { get; set; }
 
+        /// <summary>
+        /// Image variable
+        /// </summary>
         [Category("Output")]
         public OutArgument<Image> ImageResult { get; set; }
 
@@ -145,8 +182,14 @@ namespace Yubi_V2
         }
     }
 
+    /// <summary>
+    /// Starts browser. I am aware of UiPath have this activity already, but its better to use user's default browser instead of using someone else's
+    /// </summary>
     public class StartBrowser : CodeActivity
     {
+        /// <summary>
+        /// The link the user is going to
+        /// </summary>
         [Category("Input")]
         public InArgument<string> Url { get; set; }
 

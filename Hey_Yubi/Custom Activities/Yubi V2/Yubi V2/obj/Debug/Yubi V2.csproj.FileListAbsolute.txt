@@ -27,8 +27,8 @@ C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities
 C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\Yubi V2\Yubi V2\bin\Debug\Newtonsoft.Json.xml
 C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\Yubi V2\Yubi V2\bin\Debug\OpenSSL.PrivateKeyDecoder.xml
 C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\Yubi V2\Yubi V2\bin\Debug\OpenSSL.X509Certificate2.Provider.xml
+C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\Yubi V2\Yubi V2\obj\Debug\Yubi V2.csprojAssemblyReference.cache
 C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\Yubi V2\Yubi V2\obj\Debug\Yubi V2.csproj.CoreCompileInputs.cache
 C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\Yubi V2\Yubi V2\obj\Debug\Yubi V2.csproj.CopyComplete
 C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\Yubi V2\Yubi V2\obj\Debug\Yubi V2.dll
 C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\Yubi V2\Yubi V2\obj\Debug\Yubi V2.pdb
-C:\Users\tony_\OneDrive\Desktop\Github stuff\Hey Yubi\Hey_Yubi\Custom Activities\Yubi V2\Yubi V2\obj\Debug\Yubi V2.csprojAssemblyReference.cache
