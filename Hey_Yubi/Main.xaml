@@ -527,7 +527,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">130,645.5 130,675.5 380,675.5 380,653.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Flowchart DisplayName="Youtube Searching" sap:VirtualizedContainerService.HintSize="1019,802" sap2010:WorkflowViewState.IdRef="Flowchart_3">
+              <Flowchart DisplayName="Youtube Searching" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_3">
                 <Flowchart.Variables>
                   <Variable x:TypeArguments="sd:DataTable" Name="JsonDataTable" />
                   <Variable x:TypeArguments="x:String" Name="result" />
@@ -1685,7 +1685,7 @@
                   <OutArgument x:TypeArguments="x:String">[SearchItem]</OutArgument>
                 </Assign.To>
                 <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">Rick Roll</InArgument>
+                  <InArgument x:TypeArguments="x:String">Persona 4 battle theme</InArgument>
                 </Assign.Value>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">

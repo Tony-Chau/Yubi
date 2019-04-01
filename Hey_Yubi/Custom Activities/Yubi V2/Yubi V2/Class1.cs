@@ -85,7 +85,6 @@ namespace Yubi_V2
         protected override void Execute(CodeActivityContext context)
         {
             string word = Word.Get(context);
-            MessageBox.Show(word);
             //Next
             if (word == "checks" || word == "nex" || word == "dex"
                 || word == "ex" || word == "fecks" || word == "decks"
