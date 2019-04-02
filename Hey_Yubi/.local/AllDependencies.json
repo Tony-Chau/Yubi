@@ -362,12 +362,18 @@
           "lib/Yubi V2.dll": {}
         }
       },
-      "YubiPackage/1.0.5": {
+      "YubiPackage/1.0.7": {
         "type": "package",
         "compile": {
           "lib/_._": {}
         },
         "runtime": {
+          "lib/CloudrailSI.dll": {},
+          "lib/Google.Protobuf.dll": {},
+          "lib/MySql.Data.dll": {},
+          "lib/Newtonsoft.Json.dll": {},
+          "lib/OpenSSL.PrivateKeyDecoder.dll": {},
+          "lib/OpenSSL.X509Certificate2.Provider.dll": {},
           "lib/UIPathCustom.dll": {}
         }
       }
@@ -900,13 +906,27 @@
         "yubiextension.nuspec"
       ]
     },
-    "YubiPackage/1.0.5": {
-      "sha512": "nzZUZl8Gbbzu6vp7OlmXtwJbPr4TwKI1cRxaLKDBrWpWGQxFQgBVRx/T+iyP4cmm0BQ4zzbBguRrUEOOiDXxgw==",
+    "YubiPackage/1.0.7": {
+      "sha512": "w5LMO1bMMiUw0mG9LAokEmfRkvXuI7kiWZXlYjC6NzazYaSGv0L8buz+gvze+4vjUObvtMM1SNZzdyfCoKA7dw==",
       "type": "package",
-      "path": "yubipackage/1.0.5",
+      "path": "yubipackage/1.0.7",
       "files": [
+        "lib/CloudrailSI.dll",
+        "lib/Google.Protobuf.dll",
+        "lib/Google.Protobuf.pdb",
+        "lib/Google.Protobuf.xml",
+        "lib/MySql.Data.dll",
+        "lib/MySql.Data.xml",
+        "lib/Newtonsoft.Json.dll",
+        "lib/Newtonsoft.Json.xml",
+        "lib/OpenSSL.PrivateKeyDecoder.dll",
+        "lib/OpenSSL.PrivateKeyDecoder.xml",
+        "lib/OpenSSL.X509Certificate2.Provider.dll",
+        "lib/OpenSSL.X509Certificate2.Provider.xml",
         "lib/UIPathCustom.dll",
-        "yubipackage.1.0.5.nupkg.sha512",
+        "lib/UIPathCustom.dll.config",
+        "lib/UIPathCustom.pdb",
+        "yubipackage.1.0.7.nupkg.sha512",
         "yubipackage.nuspec"
       ]
     }
@@ -921,7 +941,7 @@
       "UiPath.UIAutomation.Activities >= 19.3.0 <= 19.3.0",
       "UiPath.WebAPI.Activities >= 1.4.0 <= 1.4.0",
       "YubiExtension >= 1.2.4 <= 1.2.4",
-      "YubiPackage >= 1.0.5 <= 1.0.5"
+      "YubiPackage >= 1.0.7 <= 1.0.7"
     ]
   },
   "packageFolders": {
@@ -976,7 +996,7 @@
           "YubiPackage": {
             "include": "Runtime",
             "target": "Package",
-            "version": "[1.0.5, 1.0.5]"
+            "version": "[1.0.7, 1.0.7]"
           }
         }
       }

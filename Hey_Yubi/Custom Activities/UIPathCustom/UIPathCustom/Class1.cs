@@ -53,7 +53,7 @@ namespace UIPathCustom
     /// <summary>
     /// Playing the Wav sound activity
     /// </summary>
-    public class PlayWav : CodeActivity
+    public class PlaySound : CodeActivity
     {
         /// <summary>
         /// The path to the wav file
@@ -97,25 +97,25 @@ namespace UIPathCustom
         protected override void Execute(CodeActivityContext context)
         {
             string word = SpelledOutWord.Get(context);
-            word.ToLower();
-            word.Replace("dot", ".");
-            word.Replace("period", ".");
-            word.Replace("dash", "-");
-            word.Replace("divide", "/");
-            word.Replace("slash", "/");
-            word.Replace("minus", "-");
-            word.Replace("subtract", "-");
-            word.Replace("plus", "+");
-            word.Replace("add", "+");
-            word.Replace("hash", "#");
-            word.Replace("sharp", "#");
-            word.Replace("mutiply", "*");
-            word.Replace("asterisk", "*");
-            word.Replace("under score", "_");
-            word.Replace("at", "@");
+            word = word.ToLower();
+            word = word.Replace("dot", ".");
+            word = word.Replace("period", ".");
+            word = word.Replace("dash", "-");
+            word = word.Replace("divide", "/");
+            word = word.Replace("slash", "/");
+            word = word.Replace("minus", "-");
+            word = word.Replace("subtract", "-");
+            word = word.Replace("plus", "+");
+            word = word.Replace("add", "+");
+            word = word.Replace("hash", "#");
+            word = word.Replace("sharp", "#");
+            word = word.Replace("mutiply", "*");
+            word = word.Replace("asterisk", "*");
+            word = word.Replace("under score", "_");
+            word = word.Replace("at", "@");
 
-            word.Replace(" ", "");
-            word.Replace("space", " ");
+            word = word.Replace(" ", "");
+            word = word.Replace("space", " ");
             Result.Set(context, word);
         }
     }
