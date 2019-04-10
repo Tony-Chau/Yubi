@@ -10,8 +10,8 @@
 
 <ol type="1">
   <li>Click on the link above</li>
-  <li>Download <a href="https://www.python.org/downloads/release/python-360/" target="_blank">Python 3.6 64 bit</a> version and install Python</li>
-  <li>Go to the Python folder from the git folder and read the following instructions. <a href="https://github.com/Tony-Chau/Yubi/tree/master/Hey_Yubi/asset/Python" target="_blank">Click here for a shortcut</a></li>
+  <li>Download <a href="https://www.python.org/downloads/release/python-360/">Python 3.6 64 bit</a> version and install Python</li>
+  <li>Go to the Python folder from the git folder and read the following instructions. <a href="https://github.com/Tony-Chau/Yubi/tree/master/Hey_Yubi/asset/Python">Click here for a shortcut</a></li>
   <li>Put the nuget file to "C:\ProgramData\UiPath\Packages"</li>
   <li>Run UiRobot program</li>
   <li>Go to your system tray and a UiPath logo should appear. Click on it and click update on the "Hey_Yubi" row and you should be good to go.</li>
