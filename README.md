@@ -13,5 +13,5 @@
   <li>Go to the Python folder from the git folder and read the following instructions. <a href="https://github.com/Tony-Chau/Yubi/tree/master/Hey_Yubi/asset/Python">Click here for a shortcut</a></li>
   <li>Put the nuget file to "C:\ProgramData\UiPath\Packages"</li>
   <li>Run UiRobot program</li>
-  <li>Go to your system tray and with UiPath logo and click on it and click update on Yubi and you should be good to go.</li>
+  <li>Go to your system tray and a UiPath logo should appear. Click on it and click update on the "Hey_Yubi" row and you should be good to go.</li>
 </ol>  
