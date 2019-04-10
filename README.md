@@ -4,11 +4,12 @@
 <p> This Youtube AI program uses voice recognition to search videos for you and shows them to you directly. This project was made for fun and was not intended to be a useful program.</p>
 
 <p> Please download UiPath Robot to test this AI. This is just the alpha version and working on other projects right now. Will upload a video soon.</p>
-<p> Please click the link here: https://drive.google.com/file/d/1NGVdkirB7JgpLdgc8OPJ-RKga4M5UIT8/view?usp=sharing</p>
+<p> Exported link here: https://drive.google.com/file/d/1NGVdkirB7JgpLdgc8OPJ-RKga4M5UIT8/view?usp=sharing</p>
 
 <p>How to activate it</p>
 
 <ol type="1">
+  <li>Click on the link above</li>
   <li>Download <a href="https://www.python.org/downloads/release/python-360/">Python 3.6 64 bit</a> version and install Python</li>
   <li>Go to the Python folder from the git folder and read the following instructions. <a href="https://github.com/Tony-Chau/Yubi/tree/master/Hey_Yubi/asset/Python">Click here for a shortcut</a></li>
   <li>Put the nuget file to "C:\ProgramData\UiPath\Packages"</li>
