@@ -1,12 +1,12 @@
 # Yubi
 <p>This project was made in UIPath, Python, Visual Studio (.NET) using C# language, Visual Basic (showing thumbnails) and mysql. Custom Activity was used and nuget packages were self made with the exception of Python. Only the Youtube API was used.</p>
 
-<p> This Youtube AI program uses voice recognition to search videos and plays them. This project was made for fun and was not intended to be a useful.</p>
+<p> This Youtube RPA program uses voice recognition to search videos and plays them.</p>
 
-<p> Please download UiPath Robot to test this AI. This is just the alpha version and working on other projects right now.</p>
-<p> Exported link here: https://drive.google.com/file/d/17nSIpE0o7P4NadhgxQUAvZB50H5WDYkh/view?usp=sharing</p>
-<p> Video Link Here: https://drive.google.com/file/d/1ku8KWGXUwm62ncMvyLwS0_rZtzXCBe_5/view?usp=sharing</p>
-<p> Video was recoreded using Nvidia Geforce experience. Normally your browser would open fullscreen, but this time, it did not operate it this time.</p>
+<p> Please download UiPath Robot to test this program.</p>
+<p> <strong>Exported link here:</strong> https://drive.google.com/file/d/17nSIpE0o7P4NadhgxQUAvZB50H5WDYkh/view?usp=sharing</p>
+<p> <strong>Video Link Here:</strong> https://drive.google.com/file/d/1ku8KWGXUwm62ncMvyLwS0_rZtzXCBe_5/view?usp=sharing</p>
+<p> Video was recoreded using Nvidia Geforce experience. Normally your browser would be open in fullscreen, but this time, it did not perform it.</p>
 
 <p>How to activate it</p>
 
