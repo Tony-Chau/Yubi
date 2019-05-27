@@ -106,7 +106,7 @@
           <av:PointCollection x:Key="ConnectorLocation">130,451 130,474.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <u:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_7" Message="Hello, My name is Yubi. I am your personal A.I. who can assist you to search and watch Youtube Videos. What do you want me to search? Before we search for a video, please say the following methods. Speak, spell or write. Say your answer after this beep." Rate="0" Volume="100">
+      <u:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_7" Message="Hello, My name is Yubi. I am a program that can assist you to search and watch Youtube Videos. What do you want me to search for? Before we search for a video, please say the following methods. Speak, spell or write. Say your answer after this beep." Rate="0" Volume="100">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -872,7 +872,7 @@
                                       <av:PointCollection x:Key="ConnectorLocation">710,535.5 710,565.5 840,565.5 840,586.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Flowchart DisplayName="Showing boxes" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_4">
+                                  <Flowchart DisplayName="Showing boxes" sap:VirtualizedContainerService.HintSize="725,636" sap2010:WorkflowViewState.IdRef="Flowchart_4">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -893,7 +893,7 @@
                                           <av:PointCollection x:Key="ConnectorLocation">300,141 300,191</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <u:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_26" Message="Ok. I will show you a box. You have 3 seconds to respond. Please say either back, next, play or exit. Saying exit will shutdown this program. Please respond after the next beep. " Rate="0" Volume="100" />
+                                      <u:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_26" Message="Ok. I will show you the thumbnail of the video in a small window. You have 3 seconds to respond. Please say either back, next, play or exit. Saying exit will shutdown this program. Please respond after the next beep. " Rate="0" Volume="100" />
                                       <FlowStep.Next>
                                         <FlowStep x:Name="__ReferenceID18">
                                           <sap:WorkflowViewStateService.ViewState>
@@ -987,7 +987,7 @@
                                                             <av:PointCollection x:Key="ConnectorLocation">450,40 410,40</av:PointCollection>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <u:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_31" Message="Sorry, I did not catch that. I will show you the photo again. Please say next, back, play or exit. after the next beep." Rate="10" Volume="100">
+                                                        <u:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_31" Message="Sorry, I did not catch that. I will show you the photo again. Please say next, back, play or exit. after the next beep." Rate="0" Volume="100">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1289,7 +1289,7 @@
                                               <av:PointCollection x:Key="ConnectorLocation">581,51 581,81 300,81 300,119</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <u:TextToSpeech DisplayName="Confirmation result" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_32" Message="[string.Format(&quot;Ok. I have found around {0} results&quot;, JsonDataTable.Rows.Count)]" Rate="10" Volume="100">
+                                          <u:TextToSpeech DisplayName="Confirmation result" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_32" Message="[string.Format(&quot;Ok. I have found around {0} results&quot;, JsonDataTable.Rows.Count)]" Rate="10" Volume="0">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>

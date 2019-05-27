@@ -3,20 +3,21 @@
   "description": "Youtube API AI",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Python.Activities": "[1.1.6863.33404]",
-    "UiPath.CefSharpBundle": "[1.0.0]",
-    "UiPath.WebAPI.Activities": "[1.4.0]",
-    "UiPath.UIAutomation.Activities": "[19.3.0]",
-    "UiPath.System.Activities": "[19.3.0]",
     "UiPath": "[10.0.7020.22745]",
+    "UiPath.CefSharpBundle": "[1.0.0]",
+    "UiPath.Python.Activities": "[1.1.6863.33404]",
+    "UiPath.System.Activities": "[19.3.0]",
+    "UiPath.UIAutomation.Activities": "[19.3.0]",
+    "UiPath.WebAPI.Activities": "[1.4.0]",
     "YubiExtension": "[1.2.4]",
     "YubiPackage": "[1.0.7]"
   },
   "schemaVersion": "3.2",
   "studioVersion": "19.2.0.0",
-  "projectVersion": "1.0.7-alpha.1",
+  "projectVersion": "1.0.7-alpha.5",
   "runtimeOptions": {
     "autoDispose": false,
+    "isPausable": true,
     "excludedLoggedData": [
       "Private:*",
       "*password*"
@@ -61,5 +62,6 @@
       }
     ],
     "output": []
-  }
+  },
+  "webServices": []
 }
