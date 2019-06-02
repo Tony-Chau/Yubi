@@ -5,8 +5,8 @@
 
 <p> Please download UiPath Robot to test this program.</p>
 <p> <strong>Exported link here:</strong> https://drive.google.com/file/d/17nSIpE0o7P4NadhgxQUAvZB50H5WDYkh/view?usp=sharing</p>
-<p> <strong>Video Link Here:</strong> https://drive.google.com/file/d/1ku8KWGXUwm62ncMvyLwS0_rZtzXCBe_5/view?usp=sharing</p>
-<p> Video was recoreded using Nvidia Geforce experience. Normally your browser would be open in fullscreen, but this time, it did not perform it.</p>
+<p> <strong>Video Link Here:</strong> https://drive.google.com/file/d/1-8Vc6mCcWa7uhgeeyIvOqhnd1-f4qetZ/view?usp=sharing</p>
+<p> Video was recoreded using Nvidia Geforce experience. Normally your browser would be open in fullscreen, but this time, it did not perform it. Youtube video example was <a href="https://www.youtube.com/watch?v=z_0u00b1iEQ">Arc North - Never Gonna</a>.</p>
 
 <p>How to activate it</p>
 
