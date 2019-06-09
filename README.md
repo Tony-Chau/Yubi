@@ -1,13 +1,13 @@
 # Yubi
-<p>This project was made in UIPath, Python, Visual Studio (.NET) using C# language, Visual Basic (showing thumbnails) and mysql. Custom Activity was used and nuget packages were self made with the exception of Python. Only the Youtube API was used.</p>
-
-<p> This Youtube RPA program uses voice recognition to search videos and plays them.</p>
-
-<p> Please download UiPath Robot to test this program.</p>
+<p>This project was made in UIPath, Python, Visual Studio (.NET) using C# language, Visual Basic (showing thumbnails) and mysql. Custom Activity was used and nuget packages were self made with the exception of Python. Only the Youtube API was used. This Youtube RPA program uses voice recognition to search videos and plays them.</p>
+<br>
+<p> Please download UiPath Robot to test this program and click on the link below to download the exported file of the project.</p>
 <p> <strong>Exported link here:</strong> https://drive.google.com/file/d/17nSIpE0o7P4NadhgxQUAvZB50H5WDYkh/view?usp=sharing</p>
+<br>
+<p> If you wish to watch a demo of how the app works instead, please watch this video instead</p>
 <p> <strong>Video Link Here:</strong> https://drive.google.com/file/d/1-8Vc6mCcWa7uhgeeyIvOqhnd1-f4qetZ/view?usp=sharing</p>
 <p> Video was recoreded using Nvidia Geforce experience. Normally your browser would open the window for you, but this time, it did not perform this action. Youtube video example was <a href="https://www.youtube.com/watch?v=z_0u00b1iEQ">Arc North - Never Gonna</a>.</p>
-
+<br>
 <p><strong>How to activate it</strong></p>
 
 <ol type="1">
