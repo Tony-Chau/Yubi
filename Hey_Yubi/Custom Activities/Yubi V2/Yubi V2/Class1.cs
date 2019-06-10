@@ -131,14 +131,14 @@ namespace Yubi_V2
         {
             //sql code
             string key = "";
-            string connSTR = "server=team52truii.heliohost.org;user={Me};database={Secret Database};port=3306;password={NO!!!}";
+            string connSTR = "server=team52truii.heliohost.org;user={Me};database={The database};port=3306;password={NO}";
 
             try
             {
                 MySqlConnection conn = new MySqlConnection(connSTR);
                 conn.Open();
                 //Name ApiKey ApiSecret
-                string sql = "SELECT * FROM {My database}.{Amazing Project} WHERE Name=\"{private}\"";
+                string sql = "SELECT * FROM {My database}.{Amazing project} WHERE Name=\"{private}\"";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
                 while (rdr.Read())
