@@ -5,7 +5,7 @@
 <p> <strong>Exported link here:</strong> https://drive.google.com/file/d/17nSIpE0o7P4NadhgxQUAvZB50H5WDYkh/view?usp=sharing</p>
 <br>
 <p> If you wish to watch a demo of how the app works instead, please watch this video</p>
-<p> <strong>Video Link Here:</strong> https://drive.google.com/file/d/1-8Vc6mCcWa7uhgeeyIvOqhnd1-f4qetZ/view?usp=sharing</p>
+<p> <strong>Video link here:</strong> https://drive.google.com/file/d/1-8Vc6mCcWa7uhgeeyIvOqhnd1-f4qetZ/view?usp=sharing</p>
 <p> Video was recoreded using Nvidia Geforce experience. Normally your browser would open the window for you, but this time, it did not perform this action. Youtube video example was <a href="https://www.youtube.com/watch?v=z_0u00b1iEQ">Arc North - Never Gonna</a>.</p>
 <br>
 <p><strong>How to activate it</strong></p>
